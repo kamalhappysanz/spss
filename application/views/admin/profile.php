@@ -59,3 +59,64 @@
         </div>
       </div>
     </div>
+    <script>
+
+
+    $('#profile_update').validate({
+    rules: {
+        name: {required: true },
+        email: { email: true,required: true },
+        gender: {required: true },
+        address: {required: true },
+        city: {required: true },
+        phone: {required: true,digits:true,minlength:10,maxlength:10
+             }
+    },
+    messages: {
+        name:{
+          required :"Please enter name"
+        },
+        city:{
+          required :"Please enter city"
+        },
+        address:{
+          required :"Please enter address"
+        },
+        gender:{
+            required :"Select Gender"
+          },
+        email: {
+    					 required: "Please enter Email.",
+    					 remote: "Email  already in Exist!"
+    							 },
+       phone: {
+       					 required: "Please enter phone number.",
+       					 remote: "Phone number  already in Exist!"
+       							 },
+
+    },
+    submitHandler: function(form) {
+    $.ajax({
+               url: "<?php echo base_url(); ?>home/update_profile",
+               type: 'POST',
+               data: $('#profile_update').serialize(),
+               dataType: "json",
+               success: function(response) {
+                  var stats=response.status;
+                   if (stats=="success") {
+                     swal('Profile Updated')
+                     window.setTimeout(function () {
+                      location.href = "dashboard";
+                  }, 1000);
+
+                 }else{
+                     $('#res').html(response.msg)
+                     }
+               }
+           });
+         }
+
+    });
+
+
+    </script>

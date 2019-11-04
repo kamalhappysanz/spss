@@ -27,7 +27,7 @@
             <div class="auto-form-wrapper">
 
               <form action="#" method="post" id="login_form">
-                  <center> <img src="<?php echo base_url(); ?>assets/logo.png" style="width:270px;"> </center>
+                  <center> CITSPC Admin </center>
                   <br>
                 <div class="form-group">
                         <label for="username">Username</label>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group d-flex justify-content-between">
 
-                  <a href="<?php echo base_url(); ?>forgotpassword" class="text-small forgot-password text-black">Forgot Password</a>
+                  
                 </div>
 
 

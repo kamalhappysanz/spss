@@ -44,7 +44,10 @@ th{
     <nav class="navbar horizontal-layout col-lg-12 col-12 p-0">
       <div class="container d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top">
-          <a class="navbar-brand brand-logo" href="<?php echo base_url(); ?>dashboard"><img src="<?php echo base_url(); ?>assets/logo.png" alt="logo" style="width:100%;"/></a>
+          <a class="navbar-brand brand-logo" href="<?php echo base_url(); ?>dashboard">
+            <!-- <img src="<?php echo base_url(); ?>assets/logo.png" alt="logo" style="width:100%;"/> -->
+            CITSPC
+          </a>
 
         </div>
 
@@ -55,7 +58,7 @@ th{
             <li class="nav-item">
               <a href="<?php echo base_url(); ?>dashboard" class="nav-link"><i class="fa fa-desktop" aria-hidden="true"></i> &nbsp; <span class="menu-title">DASHBOARD</span></a>
             </li>
-              <?php  if($role=='1' || $role=='2' || $role=='7'){ ?>
+
             <li class="nav-item mega-menu">
               <a href="#" class="nav-link"><i class="fa fa-bars" aria-hidden="true"></i></i>&nbsp;
                 <span class="menu-title">Main Menu</span><i class="menu-arrow"></i></a>
@@ -63,43 +66,40 @@ th{
                 <div class="col-group-wrapper row">
 
                    <div class="col-group col-md-2 col-md-offset-1">
-                     <p class="category-heading">Masters</p>
+
                      <ul class="submenu-item">
-                       <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/create_city">City </a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/create_category">Category </a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Banners </a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>offers">Offers </a></li>
-                        <?php if($role=='1'){ ?>
-                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/tax_commission">Rates </a></li>
-                      <?php  } ?>
-
-                        <?php if($role=='7' ||$role=='6'){ ?>
-
-                        <?php  }else{ ?>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/create_staff">Create staff</a></li>
-                       <?php  } ?>
-
-
-
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders </a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>">Governing council </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Committee</a></li>
                      </ul>
                    </div>
 
                      <div class="col-group col-md-2">
-                       <p class="category-heading">List</p>
                        <ul class="submenu-item">
-                         <?php if($role=='7' ||$role=='6' ||$role=='2'){ ?>
-                         <?php  }else{ ?>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/get_all_staff">Staff</a></li>
-                        <?php  } ?>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/get_all_provider_list">Commando </a></li>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/get_all_person_list">Expert </a></li>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/get_all_customer_details">Customers </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Departments </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Syllabi </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Academic Calender </a></li>
                      </ul>
                      </div>
-                     <div class="col-group col-md-3">
-                       <p class="category-heading">Recent Commandos and Experts</p>
+                     <div class="col-group col-md-2">
                        <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>verifyprocess/get_vendor_verify_list">Commando list </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Libary </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Faculty </a></li>
+                       </ul>
+                     </div>
+                     <div class="col-group col-md-2">
+                       <ul class="submenu-item">
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">E-Governance </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Sports </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">News </a></li>
+
+                       </ul>
+                     </div>
+                     <div class="col-group col-md-2">
+                       <ul class="submenu-item">
+
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Events </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Announcements </a></li>
                        </ul>
                      </div>
 
@@ -110,58 +110,37 @@ th{
                 </div>
               </div>
             </li>
-            <?php   }else{ }?>
-            <?php  if($role=='6'){ ?>
+
+
+
             <li class="nav-item">
               <a href="#" class="nav-link"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;
-                <span class="menu-title">Masters</span><i class="menu-arrow"></i></a>
+                <span class="menu-title">Students</span><i class="menu-arrow"></i></a>
               <div class="submenu">
                 <ul class="submenu-item">
-
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/create_category">Category </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Banners </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>offers">Offers </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Student union </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Exam Performance </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Downloads </a></li>
 
                 </ul>
               </div>
             </li>
-            <?php  }else{} ?>
 
-            <?php  if($role=='1' || $role=='2' || $role=='7'){ ?>
             <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;
-                <span class="menu-title">Service Orders</span><i class="menu-arrow"></i></a>
+              <a href="#" class="nav-link"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;<span class="menu-title">Placements</span><i class="menu-arrow"></i></a>
               <div class="submenu">
                 <ul class="submenu-item">
 
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>service_orders/pending_orders">Pending Orders</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>service_orders/ongoing_orders">OnGoing Orders</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>service_orders/completed_orders">Completed Orders</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>service_orders/cancelled_orders">Cancelled Orders</a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Records </a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Visited </a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement recruiters</a></li>
+                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Co-ordinators</a></li>
 
-                </ul>
-              </div>
-            </li>
-            <?php  }else{} ?>
-            <?php  if($role=='1' || $role=='2'){ ?>
-            <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;<span class="menu-title">Transaction</span><i class="menu-arrow"></i></a>
-              <div class="submenu">
-                <ul class="submenu-item">
-
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>transaction/daily_transaction">Daily transaction</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>transaction/day_wise_transaction">Date wise transaction</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>transaction/from_date_and_to_date_transactions">From & To date </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>transaction/provider_based_transaction">Commando transactions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>transaction/online_payment_history">Online Payment History</a></li>
-
-                </li>
 
 
                 </ul>
               </div>
                 </li>
-                <?php  }else{} ?>
 
 
 
@@ -169,9 +148,7 @@ th{
               <a href="#" class="nav-link"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;<span class="menu-title">Settings</span><i class="menu-arrow"></i></a>
               <div class="submenu">
                 <ul class="submenu-item">
-                  <?php  if($role=='1' || $role=='2'){ ?>
-                    <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>home/view_contact_form">Contact Box</a></li>
-                  <?php }else{}?>
+
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>profile">Profile</a></li>
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>change_password">Password</a></li>
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logout">Logout</a></li>
