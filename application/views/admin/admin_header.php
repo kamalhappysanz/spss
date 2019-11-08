@@ -26,6 +26,8 @@
 
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
   <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
 <style>
 .fa{
   color: #125ba1;
@@ -96,12 +98,21 @@ th{
                        </ul>
                      </div>
                      <div class="col-group col-md-2">
+
                        <ul class="submenu-item">
 
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Events </a></li>
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Announcements </a></li>
                        </ul>
                      </div>
+                     <div class="col-group col-md-2">
+                       <p class="category-heading">Exam</p>
+                       <ul class="submenu-item">
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Exam Performance </a></li>
+                       </ul>
+                     </div>
+
 
 
 
@@ -119,7 +130,7 @@ th{
               <div class="submenu">
                 <ul class="submenu-item">
                      <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Student union </a></li>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Exam Performance </a></li>
+
                      <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Downloads </a></li>
 
                 </ul>
