@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
 
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/style.css">
-    <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendors/icheck/skins/all.css"> -->
-   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendors/iconfonts/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/vendors/iconfonts/font-awesome/css/font-awesome.min.css" />
 
   <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/admin/images/favicon.png" />
   <script   src="<?php echo base_url(); ?>assets/admin/js/jquery.js"></script>
@@ -23,6 +22,9 @@
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/datatable.js"></script>
   <script src="<?php echo base_url(); ?>assets/admin/js/bootstrap-min.js"></script>
   <script src="<?php echo base_url(); ?>assets/admin/js/tether.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
   <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
@@ -70,7 +72,8 @@ th{
                    <div class="col-group col-md-2 col-md-offset-1">
 
                      <ul class="submenu-item">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders </a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders  <i class="fa fa-check" aria-hidden="true"></i>
+</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>">Governing council </a></li>
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Committee</a></li>
                      </ul>
@@ -78,7 +81,7 @@ th{
 
                      <div class="col-group col-md-2">
                        <ul class="submenu-item">
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Departments </a></li>
+                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/">Departments </a></li>
                      <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Syllabi </a></li>
                      <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Academic Calender </a></li>
                      </ul>
@@ -108,7 +111,8 @@ th{
                      <div class="col-group col-md-2">
                        <p class="category-heading">Exam</p>
                        <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam  <i class="fa fa-check" aria-hidden="true"></i>
+</a></li>
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Exam Performance </a></li>
                        </ul>
                      </div>
@@ -160,9 +164,12 @@ th{
               <div class="submenu">
                 <ul class="submenu-item">
 
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>profile">Profile</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>change_password">Password</a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logout">Logout</a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>profile">Profile <i class="fa fa-check" aria-hidden="true"></i>
+</a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>change_password">Password <i class="fa fa-check" aria-hidden="true"></i>
+</a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logout">Logout <i class="fa fa-check" aria-hidden="true"></i>
+</a></li>
                 </ul>
               </div>
             </li>

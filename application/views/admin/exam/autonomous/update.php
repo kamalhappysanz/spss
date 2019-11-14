@@ -49,6 +49,7 @@
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>
                           </select>
+                            <script>$('#status').val('<?php echo $rows->status; ?>')</script>
                         </div>
                       </div>
                     </div>

@@ -1,7 +1,7 @@
 
 <footer class="footer">
           <div class="container clearfix">
-          
+
           </div>
 </footer>
 </div>
@@ -20,6 +20,10 @@ input[type="search"]:after{
 <!-- <script src="<?php echo base_url(); ?>assets/admin/js/data-table.js"></script> -->
 <script>
 // $('#example').DataTable();
+
+$('#summernote').summernote({height: 200 });
+$('#summernote_1').summernote({height: 200 });
+$('#summernote_2').summernote({height: 200 });
 
 var table = $('#example').DataTable({
   language: {
