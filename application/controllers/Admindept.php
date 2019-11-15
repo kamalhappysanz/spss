@@ -124,7 +124,8 @@ class Admindept extends CI_Controller {
 		 $user_id=$this->session->userdata('user_id');
 		 $user_type=$this->session->userdata('user_role');
 		 if($user_type=='1'){
-			 $data['res']=$this->admindeptmodel->get_all_data();
+			 $dept_id=$this->uri->segment(3);
+			 $data['res']=$this->admindeptmodel->get_all_staff_data($dept_id);
 			 $this->load->view('admin/admin_header');
 			 $this->load->view('admin/dept/add_dept_staff',$data);
 			 $this->load->view('admin/admin_footer');
@@ -134,6 +135,168 @@ class Admindept extends CI_Controller {
 
 	 }
 
+	 public function create_dept_staff(){
+		 $data=$this->session->userdata();
+		 $user_id=$this->session->userdata('user_id');
+		 $user_type=$this->session->userdata('user_role');
+		 if($user_type=='1'){
+			 $dept_id=$this->db->escape_str($this->input->post('dept_id'));
+			 $faculty_name=$this->db->escape_str($this->input->post('faculty_name'));
+			 $desgination=$this->db->escape_str($this->input->post('desgination'));
+			 $degree=$this->db->escape_str($this->input->post('degree'));
+			 $experience=$this->db->escape_str($this->input->post('experience'));
+			 $faculty_email=$this->db->escape_str($this->input->post('faculty_email'));
+			 $status=$this->db->escape_str($this->input->post('status'));
+			 $profilepic = $_FILES['file_upload']['name'];
+			 if(empty($profilepic)){
+			 $filename=' ';
+		 }else{
+			 $temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+			 $filename = round(microtime(true)) . '.' . $temp;
+			 $uploaddir = 'assets/staff/';
+			 $profilepic = $uploaddir.$filename;
+			 move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+		 }
+		 $data['res']=$this->admindeptmodel->create_dept_staff($dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id);
+		 if($data['res']['status']=="success"){
+			 $messge = array('message' => 'Successfully Created','class' => 'alert alert-success fade in');
+			 $this->session->set_flashdata('msg', $messge);
+			redirect('admindept/add_dept_staff/'.$dept_id.'#list' );
+		 }else{
+			 $messge = array('message' => $data['res']['status'],'class' => 'alert alert-danger fade in');
+			 $this->session->set_flashdata('msg', $messge);
+			 redirect('admindept/add_dept_staff/'.$dept_id.'#list' );
+		 }
+
+		 }else {
+				redirect('/login');
+		 }
+	 }
+
+
+	 public function change_dept_staff_position(){
+		 $data=$this->session->userdata();
+		 $user_id=$this->session->userdata('user_id');
+		 $user_type=$this->session->userdata('user_role');
+		if($user_type=='1'){
+			$position = $this->input->post('position');
+			$this->admindeptmodel->change_dept_staff_position($position);
+		}else{
+
+		}
+	 }
+
+	 public function get_dept_staff_edit(){
+		 $data=$this->session->userdata();
+		$user_id=$this->session->userdata('user_id');
+		$user_type=$this->session->userdata('user_role');
+		if($user_type=='1'){
+		 $id=$this->uri->segment(3);
+		 $data['res']=$this->admindeptmodel->get_dept_staff_edit($id);
+		 $this->load->view('admin/admin_header');
+		 $this->load->view('admin/dept/edit_dept_staff',$data);
+		 $this->load->view('admin/admin_footer');
+		}else{
+			 redirect('/login');
+		}
+	 }
+
+
+	 public function update_dept_staff(){
+		 $data=$this->session->userdata();
+		$user_id=$this->session->userdata('user_id');
+		$user_type=$this->session->userdata('user_role');
+		if($user_type=='1'){
+			$id=$this->db->escape_str($this->input->post('id'));
+			$dept_id=$this->db->escape_str($this->input->post('dept_id'));
+			$faculty_name=$this->db->escape_str($this->input->post('faculty_name'));
+			$desgination=$this->db->escape_str($this->input->post('desgination'));
+			$degree=$this->db->escape_str($this->input->post('degree'));
+			$experience=$this->db->escape_str($this->input->post('experience'));
+			$faculty_email=$this->db->escape_str($this->input->post('faculty_email'));
+			$status=$this->db->escape_str($this->input->post('status'));
+			$old_pic=$this->db->escape_str($this->input->post('old_pic'));
+			$profilepic = $_FILES['file_upload']['name'];
+			if(empty($profilepic)){
+			$filename=$old_pic;
+		}else{
+			$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+			$filename = round(microtime(true)) . '.' . $temp;
+			$uploaddir = 'assets/staff/';
+			$profilepic = $uploaddir.$filename;
+			move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+		}
+		$data['res']=$this->admindeptmodel->update_dept_staff($id,$dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id);
+		if($data['res']['status']=="success"){
+			$messge = array('message' => 'Successfully Updated','class' => 'alert alert-success fade in');
+			$this->session->set_flashdata('msg', $messge);
+		 redirect('admindept/add_dept_staff/'.$dept_id.'#list' );
+		}else{
+			$messge = array('message' => $data['res']['status'],'class' => 'alert alert-danger fade in');
+			$this->session->set_flashdata('msg', $messge);
+			redirect('admindept/add_dept_staff/'.$dept_id.'#list' );
+		}
+
+		}else {
+			 redirect('/login');
+		}
+	 }
+
+
+
+
+	 public function add_dept_lab(){
+
+		 $data=$this->session->userdata();
+		 $user_id=$this->session->userdata('user_id');
+		 $user_type=$this->session->userdata('user_role');
+		 if($user_type=='1'){
+			 $dept_id=$this->uri->segment(3);
+			 $data['res']=$this->admindeptmodel->get_all_lab_data($dept_id);
+			 $this->load->view('admin/admin_header');
+			 $this->load->view('admin/dept/add_dept_lab',$data);
+			 $this->load->view('admin/admin_footer');
+		 }else {
+				redirect('/login');
+		 }
+
+	 }
+
+
+	 	public function create_dept_lab(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+			if($user_type=='1'){
+				$dept_id=$this->db->escape_str($this->input->post('dept_id'));
+				$lab_name=$this->db->escape_str($this->input->post('lab_name'));
+				$description=$this->db->escape_str($this->input->post('description'));
+				$status=$this->db->escape_str($this->input->post('status'));
+				$profilepic = $_FILES['lab_image']['name'];
+				if(empty($profilepic)){
+				$filename=' ';
+			}else{
+				$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+				$filename = round(microtime(true)) . '.' . $temp;
+				$uploaddir = 'assets/lab/';
+				$profilepic = $uploaddir.$filename;
+				move_uploaded_file($_FILES['lab_image']['tmp_name'], $profilepic);
+			}
+			$data['res']=$this->admindeptmodel->create_dept_lab($dept_id,$lab_name,$description,$filename,$status,$user_id);
+			if($data['res']['status']=="success"){
+				$messge = array('message' => 'Successfully Created','class' => 'alert alert-success fade in');
+				$this->session->set_flashdata('msg', $messge);
+			 redirect('admindept/add_dept_lab/'.$dept_id.'#list' );
+			}else{
+				$messge = array('message' => $data['res']['status'],'class' => 'alert alert-danger fade in');
+				$this->session->set_flashdata('msg', $messge);
+				redirect('admindept/add_dept_lab/'.$dept_id.'#list' );
+			}
+
+			}else {
+				 redirect('/login');
+			}
+		}
 
 
 

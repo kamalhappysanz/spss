@@ -15,9 +15,9 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Create Department Staff <a href="javascript:window.history.go(-1);" class="btn go_back_btn pull-right">Back</a></h4>
-
-                  <form class="forms-sample" id="form_create" method="post" action="<?php echo base_url(); ?>admindept/create_dept_staff" enctype="multipart/form-data">
+                  <h4 class="card-title">Update Department Staff <a href="javascript:window.history.go(-1);" class="btn go_back_btn pull-right">Back</a></h4>
+                  <?php foreach($res as $rows){} ?>
+                  <form class="forms-sample" id="form_create" method="post" action="<?php echo base_url(); ?>admindept/update_dept_staff" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-6"></div>
                       <div class="col-md-6"></div>
@@ -26,14 +26,16 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Name</label>
-                          <input type="text" class="form-control" id="faculty_name" name="faculty_name" placeholder="Faculty name">
-                          <input type="hidden" class="form-control" id="dept_id" name="dept_id" value="<?php echo $this->uri->segment(3); ?>">
+                          <input type="text" class="form-control" id="faculty_name" name="faculty_name" placeholder="Faculty name" value="<?php echo $rows->faculty_name; ?>">
+                          <input type="hidden" class="form-control" id="id" name="id"  value="<?php echo $rows->id; ?>">
+                          <input type="hidden" class="form-control" id="old_pic" name="old_pic"  value="<?php echo $rows->file_upload; ?>">
+                          <input type="hidden" class="form-control" id="dept_id" name="dept_id"  value="<?php echo base64_encode($rows->dept_id*98765); ?>">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Faculty Degree</label>
-                          <input type="text" class="form-control" id="degree" name="degree" placeholder="">
+                          <input type="text" class="form-control" id="degree" name="degree" placeholder=""  value="<?php echo $rows->degree; ?>">
                         </div>
                       </div>
                     </div>
@@ -41,13 +43,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Desgination</label>
-                          <input type="text" class="form-control" id="desgination" name="desgination" placeholder="">
+                          <input type="text" class="form-control" id="desgination" name="desgination" placeholder="" value="<?php echo $rows->desgination; ?>">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Faculty experience</label>
-                          <input type="text" class="form-control" id="experience" name="experience" placeholder="">
+                          <input type="text" class="form-control" id="experience" name="experience" placeholder="" value="<?php echo $rows->experience; ?>">
                         </div>
                       </div>
                     </div>
@@ -55,14 +57,14 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="username">Profile Picture</label>
+                          <label for="username">Upload new picture</label>
                           <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Faculty Email</label>
-                          <input type="text" class="form-control" id="faculty_email" name="faculty_email" placeholder="">
+                          <input type="text" class="form-control" id="faculty_email" name="faculty_email" placeholder="" value="<?php echo $rows->faculty_email; ?>">
                         </div>
                       </div>
                     </div>
@@ -76,69 +78,26 @@
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>
                           </select>
+                            <script>$('#status').val('<?php echo $rows->status; ?>')</script>
                         </div>
                       </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect3">Old picture</label>
+                        <img src="<?php echo base_url(); ?>assets/staff/<?php echo $rows->file_upload; ?>" style="width:120px;">
+                      </div>
+                        </div>
 
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary mr-2">Create Staff</button>
+                    <button type="submit" class="btn btn-primary mr-2">Update  Staff</button>
                   </form>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-12 grid-margin stretch-card" id="list">
 
-              <div class="card">
-
-                <?php if($this->session->flashdata('msg')) {
-                $message = $this->session->flashdata('msg');?>
-                <div class="<?php echo $message['class'] ?>">
-                  <?php echo $message['message']; ?>
-                </div>
-              <?php  }  ?>
-
-                <div class="card-body"  >
-                  <h4 class="card-title">List of Department staff</h4>
-
-              <table id="example" class="table table-striped table-bordered">
-      <thead >
-          <tr>
-              <th>S.no</th>
-              <th>Name</th>
-              <th>Desgination</th>
-              <th>image</th>
-              <th>Position</th>
-              <th>Status</th>
-              <th>Action</th>
-
-          </tr>
-      </thead>
-        <tbody class="row_position">
-        <?php $i=1; foreach($res as $rows){ ?>
-          <tr id="<?php echo $rows->id; ?>">
-              <td><?php echo $i; ?></td>
-              <td><?php echo $rows->faculty_name; ?>  </td>
-              <td><?php echo $rows->desgination; ?>  </td>
-              <td><img src="<?php echo base_url(); ?>assets/staff/<?php echo $rows->file_upload; ?>" style="width:100px;">  </td>
-              <td><?php echo $rows->faculty_position	; ?> </td>
-              <td><?php if($rows->status=='Inactive'){ ?>
-              <button type="button" class="btn btn-danger btn-fw">Inactive</button>
-            <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
-            <?php   } ?></td>
-            <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_staff_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
-
-            </td>
-
-          </tr>
-        <?php  $i++;  }  ?>
-      </tbody>
-  </table>
-</div>
-</div>
-</div>
           </div>
         </div>
       </div>
@@ -148,7 +107,7 @@
       rules: {
 
           faculty_name:{required:true},
-          file_upload:{required:true},
+          file_upload:{required:false},
           degree:{required:true},
           experience:{required:true},
           faculty_email	:{required:true},
@@ -164,23 +123,5 @@
 
       }
       });
-      $( ".row_position" ).sortable({
-stop: function() {
-var selectedData = new Array();
-      $('.row_position>tr').each(function() {
-          selectedData.push($(this).attr("id"));
-      });
-      updateOrder(selectedData);
-  }
-});
-function updateOrder(data) {
-    $.ajax({
-        url:"<?php echo base_url(); ?>admindept/change_dept_staff_position",
-        type:'post',
-        data:{position:data},
-        success:function(result){
-          window.location.reload();
-         }
-    })
-}
+
     </script>

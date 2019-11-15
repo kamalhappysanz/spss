@@ -19299,7 +19299,7 @@ ul {
     .table td img, .jsgrid .jsgrid-table td img,
     .table th img, .jsgrid .jsgrid-table th img {
       width: 30px;
-      height: 30px;
+      height: 50px;
      }
     .table td .badge, .jsgrid .jsgrid-table td .badge,
     .table th .badge, .jsgrid .jsgrid-table th .badge {
