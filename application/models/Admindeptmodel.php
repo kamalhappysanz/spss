@@ -58,7 +58,6 @@ Class Admindeptmodel extends CI_Model
 
     function update_department($id,$name,$description,$history,$vision,$status,$user_id){
     $update="UPDATE tbl_departments SET dept_name='$name',history='$history',vision='$vision',description='$description',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
-
     $result=$this->db->query($update);
       if($result){
           $data = array("status" => "success");
@@ -164,6 +163,126 @@ Class Admindeptmodel extends CI_Model
       return $data;
   }
   }
+
+
+    function change_dept_lab_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+                    $select="SELECT * FROM dept_lab_facility where id='$value'";
+                    $result=$this->db->query($select);
+                    foreach($result->result() as $rows_sub){}
+                      $dept_id=$rows_sub->dept_id;
+                    $sql = "UPDATE dept_lab_facility SET lab_position='$i' WHERE id='$value' AND dept_id='$dept_id'";
+                  $query = $this->db->query($sql);
+            $i++;
+            }
+    }
+
+    function get_dept_lab_edit($lab_id){
+      $dt_id=base64_decode($lab_id)/98765;
+      $select="SELECT * FROM dept_lab_facility WHERE id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function update_dept_lab($id,$dept_id,$lab_name,$description,$filename,$status,$user_id){
+      $update="UPDATE dept_lab_facility SET lab_name='$lab_name',description='$description',lab_image='$filename',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+      $result=$this->db->query($update);
+        if($result){
+            $data = array("status" => "success");
+              return $data;
+        }else{
+          $data = array("status" => "failed");
+            return $data;
+        }
+    }
+
+
+    function create_syllabus_activity($dept_id,$syllabus_association,$ac_sy_name,$filename,$status,$user_id){
+      $dt_id=base64_decode($dept_id)/98765;
+    $get_postion="SELECT * FROM dept_syllabus_activity WHERE dept_id='$dt_id' AND syllabus_association='$syllabus_association' order by id desc limit 1";
+    $result_postion=$this->db->query($get_postion);
+    foreach($result_postion->result() as $rows_position){}
+    $postion=$rows_position->file_position+1;
+    $insert="INSERT INTO dept_syllabus_activity (dept_id,syllabus_association,ac_sy_name,file_name,file_position,status,updated_at,updated_by) VALUES('$dt_id','$syllabus_association','$ac_sy_name','$filename','$postion','$status',NOW(),'$user_id')";
+    $result=$this->db->query($insert);
+    if($result){
+        $data = array("status" => "success");
+          return $data;
+    }else{
+      $data = array("status" => "failed");
+        return $data;
+    }
+    }
+
+
+    function get_all_sy_data($de_id){
+      $dt_id=base64_decode($de_id)/98765;
+      $select="SELECT * FROM dept_syllabus_activity WHERE dept_id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function get_dept_syllabus_activity_edit($dy_id){
+      $dt_id=base64_decode($dy_id)/98765;
+      $select="SELECT * FROM dept_syllabus_activity WHERE id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+    function get_syllabus($de_id){
+      $dt_id=base64_decode($de_id)/98765;
+      $select="SELECT * FROM dept_syllabus_activity WHERE dept_id='$dt_id' AND syllabus_association='Syllabus' ORDER BY file_position ASC";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+    function get_association($de_id){
+      $dt_id=base64_decode($de_id)/98765;
+      $select="SELECT * FROM dept_syllabus_activity WHERE dept_id='$dt_id' AND syllabus_association='Association' ORDER BY file_position ASC";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+    function update_syllabus_activity($id,$dept_id,$syllabus_association,$ac_sy_name,$filename,$status,$user_id){
+      $update="UPDATE dept_syllabus_activity SET ac_sy_name='$ac_sy_name',file_name='$filename',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+      $result=$this->db->query($update);
+        if($result){
+            $data = array("status" => "success");
+              return $data;
+        }else{
+          $data = array("status" => "failed");
+            return $data;
+        }
+    }
+
+    function change_dept_association_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+              $select="SELECT * FROM dept_syllabus_activity where id='$value'";
+              $result=$this->db->query($select);
+              foreach($result->result() as $rows_sub){}
+              $dept_id=$rows_sub->dept_id;
+               $sql = "UPDATE dept_syllabus_activity SET file_position='$i' WHERE id='$value' AND dept_id='$dept_id' AND syllabus_association='Association'";
+
+             $query = $this->db->query($sql);
+            $i++;
+            }
+    }
+
+    function change_dept_syllabus_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+              $select="SELECT * FROM dept_syllabus_activity where id='$value'";
+              $result=$this->db->query($select);
+              foreach($result->result() as $rows_sub){}
+              $dept_id=$rows_sub->dept_id;
+                $sql = "UPDATE dept_syllabus_activity SET file_position='$i' WHERE id='$value' AND dept_id='$dept_id' AND syllabus_association='Syllabus'";
+             $query = $this->db->query($sql);
+            $i++;
+            }
+    }
 
 
 

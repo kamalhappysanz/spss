@@ -62,65 +62,56 @@ th{
             <li class="nav-item">
               <a href="<?php echo base_url(); ?>dashboard" class="nav-link"><i class="fa fa-desktop" aria-hidden="true"></i> &nbsp; <span class="menu-title">DASHBOARD</span></a>
             </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;
+                <span class="menu-title">Home menu</span><i class="menu-arrow"></i></a>
+              <div class="submenu">
+                <ul class="submenu-item">
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders</a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/">Governing Council </a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/">Departments </a></li>
+<!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam </a></li> -->
 
+                </ul>
+              </div>
+            </li>
             <li class="nav-item mega-menu">
               <a href="#" class="nav-link"><i class="fa fa-bars" aria-hidden="true"></i></i>&nbsp;
-                <span class="menu-title">Main Menu</span><i class="menu-arrow"></i></a>
+                <span class="menu-title">Modules</span><i class="menu-arrow"></i></a>
               <div class="submenu">
                 <div class="col-group-wrapper row">
 
-                   <div class="col-group col-md-2 col-md-offset-1">
-
+                   <div class="col-group col-md-3">
                      <ul class="submenu-item">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders  <i class="fa fa-check" aria-hidden="true"></i>
-</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>">Governing council </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Committee</a></li>
+                       <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/">Create Modules</a></li>
+
                      </ul>
                    </div>
 
-                     <div class="col-group col-md-2">
+                     <div class="col-group col-md-3">
                        <ul class="submenu-item">
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/">Departments </a></li>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Syllabi </a></li>
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Academic Calender </a></li>
+       <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 1; ?>">Student union </a></li>
+       <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 2; ?>">Downloads </a></li>
+       <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 3; ?>">Syllabi </a></li>
+
                      </ul>
                      </div>
-                     <div class="col-group col-md-2">
+                     <div class="col-group col-md-3">
                        <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Libary </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Faculty </a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 5; ?>">Committee </a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 7; ?>">Sports </a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 6; ?>">Extra Curricular Activity </a></li>
+                         </ul>
+                     </div>
+                     <div class="col-group col-md-3">
+                       <ul class="submenu-item">
+                <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam  </a></li> -->
+                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 4; ?>">Academic Calender </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 9; ?>">SPIC </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 8; ?>">Events </a></li>
+
                        </ul>
                      </div>
-                     <div class="col-group col-md-2">
-                       <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">E-Governance </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Sports </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">News </a></li>
-
-                       </ul>
-                     </div>
-                     <div class="col-group col-md-2">
-
-                       <ul class="submenu-item">
-
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Events </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Announcements </a></li>
-                       </ul>
-                     </div>
-                     <div class="col-group col-md-2">
-                       <p class="category-heading">Exam</p>
-                       <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam  <i class="fa fa-check" aria-hidden="true"></i>
-</a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Exam Performance </a></li>
-                       </ul>
-                     </div>
-
-
-
-
-
 
                 </div>
               </div>
@@ -128,34 +119,6 @@ th{
 
 
 
-            <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;
-                <span class="menu-title">Students</span><i class="menu-arrow"></i></a>
-              <div class="submenu">
-                <ul class="submenu-item">
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Student union </a></li>
-
-                     <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Downloads </a></li>
-
-                </ul>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;<span class="menu-title">Placements</span><i class="menu-arrow"></i></a>
-              <div class="submenu">
-                <ul class="submenu-item">
-
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Records </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Visited </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement recruiters</a></li>
-                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>">Placement Co-ordinators</a></li>
-
-
-
-                </ul>
-              </div>
-                </li>
 
 
 
@@ -164,11 +127,11 @@ th{
               <div class="submenu">
                 <ul class="submenu-item">
 
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>profile">Profile <i class="fa fa-check" aria-hidden="true"></i>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>profile">Profile
 </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>change_password">Password <i class="fa fa-check" aria-hidden="true"></i>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>change_password">Password
 </a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logout">Logout <i class="fa fa-check" aria-hidden="true"></i>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logout">Logout
 </a></li>
                 </ul>
               </div>

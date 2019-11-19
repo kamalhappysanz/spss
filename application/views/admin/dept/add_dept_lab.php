@@ -6,7 +6,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
               <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>dashboard">Dashboard</a></li>
-              <li class="breadcrumb-item active" aria-current="page"><span>Department</span></li>
+              <li class="breadcrumb-item " ><a href="<?php echo base_url(); ?>admindept/">Department</a></li>
             </ol>
           </nav>
           <div class="row">
@@ -14,7 +14,7 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Create Department Lab</h4>
+                  <h4 class="card-title">Create Department Lab <a href="javascript:window.history.go(-1);" class="btn go_back_btn pull-right">Back</a></h4>
 
                   <form class="forms-sample" id="form_create" method="post" action="<?php echo base_url(); ?>admindept/create_dept_lab" enctype="multipart/form-data">
                     <div class="row">
@@ -102,7 +102,7 @@
             <?php   }else{ ?>
               <button type="button" class="btn btn-success btn-fw">Active</button>
             <?php   } ?></td>
-            <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
+            <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_lab_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
 
 
 
@@ -144,7 +144,7 @@ var selectedData = new Array();
 });
 function updateOrder(data) {
     $.ajax({
-        url:"<?php echo base_url(); ?>admindept/change_dept_position",
+        url:"<?php echo base_url(); ?>admindept/change_dept_lab_position",
         type:'post',
         data:{position:data},
         success:function(result){

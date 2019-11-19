@@ -14,7 +14,7 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Create Department</h4>
+                  <h4 class="card-title">Create Department <a href="#list" class="btn go_back_btn pull-right">View Departments</a> &nbsp;</h4>
 
                   <form class="forms-sample" id="form_create" method="post" action="<?php echo base_url(); ?>admindept/create_dept" enctype="multipart/form-data">
                     <div class="row">
@@ -110,6 +110,7 @@
             <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
               <a title="Add or View Staff" href="<?php echo base_url(); ?>admindept/add_dept_staff/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-user" aria-hidden="true"></i></a> &nbsp;&nbsp;
               <a title="Add or View Lab" href="<?php echo base_url(); ?>admindept/add_dept_lab/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-flask" aria-hidden="true"></i></a> &nbsp;&nbsp;
+              <a title="Add or View Syllabus or Association Activity" href="<?php echo base_url(); ?>admindept/add_dept_syllabus_activity/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-book" aria-hidden="true"></i></a> &nbsp;&nbsp;
 
 
 
