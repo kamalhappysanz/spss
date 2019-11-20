@@ -6,8 +6,7 @@ class Admindept extends CI_Controller {
 			 parent::__construct();
 			    $this->load->helper('url');
 			    $this->load->library('session');
-				  $this->load->model('offersmodel');
-					$this->load->model('admindeptmodel');
+				 	$this->load->model('admindeptmodel');
 
 	 }
 
@@ -530,6 +529,126 @@ class Admindept extends CI_Controller {
 			 }else{
 
 			 }
+			}
+
+
+
+
+			public function governing(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				if($user_type=='1'){
+					$data['res']=$this->admindeptmodel->get_governing_council();
+					$this->load->view('admin/admin_header');
+					$this->load->view('admin/governing/create',$data);
+					$this->load->view('admin/admin_footer');
+				}else {
+					 redirect('/login');
+				}
+			}
+
+
+			public function create_governing_council(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				if($user_type=='1'){
+					$name=$this->db->escape_str($this->input->post('name'));
+					$desgination=$this->db->escape_str($this->input->post('desgination'));
+					$description=$this->db->escape_str($this->input->post('description'));
+					$status=$this->db->escape_str($this->input->post('status'));
+					$profilepic = $_FILES['file_upload']['name'];
+					if(empty($profilepic)){
+					$filename=' ';
+				}else{
+					$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+					$filename = round(microtime(true)) . '.' . $temp;
+					$uploaddir = 'assets/council/';
+					$profilepic = $uploaddir.$filename;
+					move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+				}
+				$data['res']=$this->admindeptmodel->create_governing_council($name,$desgination,$description,$filename,$status,$user_id);
+				if($data['res']['status']=="success"){
+					$messge = array('message' => 'Successfully Created','class' => 'alert alert-success fade in');
+					$this->session->set_flashdata('msg', $messge);
+				 redirect('admindept/governing#list' );
+				}else{
+					$messge = array('message' => $data['res']['status'],'class' => 'alert alert-danger fade in');
+					$this->session->set_flashdata('msg', $messge);
+					redirect('admindept/governing#list' );
+				}
+
+				}else {
+					 redirect('/login');
+				}
+			}
+
+
+			public function get_governing_council_edit(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				if($user_type=='1'){
+					$dy_id=$this->uri->segment(3);
+					$data['res']=$this->admindeptmodel->get_governing_council_edit($dy_id);
+					$this->load->view('admin/admin_header');
+					$this->load->view('admin/governing/edit',$data);
+					$this->load->view('admin/admin_footer');
+				}else {
+					 redirect('/login');
+				}
+			}
+
+
+			public function update_governing_council(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				if($user_type=='1'){
+					$id=$this->db->escape_str($this->input->post('id'));
+					$name=$this->db->escape_str($this->input->post('name'));
+					$desgination=$this->db->escape_str($this->input->post('desgination'));
+					$description=$this->db->escape_str($this->input->post('description'));
+					$status=$this->db->escape_str($this->input->post('status'));
+					$old_file=$this->db->escape_str($this->input->post('old_file'));
+					$profilepic = $_FILES['file_upload']['name'];
+					if(empty($profilepic)){
+					$filename=$old_file;
+				}else{
+					$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+					$filename = round(microtime(true)) . '.' . $temp;
+					$uploaddir = 'assets/council/';
+					$profilepic = $uploaddir.$filename;
+					move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+				}
+				$data['res']=$this->admindeptmodel->update_governing_council($id,$name,$desgination,$description,$filename,$status,$user_id);
+				if($data['res']['status']=="success"){
+					$messge = array('message' => 'Successfully Updated','class' => 'alert alert-success fade in');
+					$this->session->set_flashdata('msg', $messge);
+				 	redirect('admindept/governing#list' );
+				}else{
+					$messge = array('message' => $data['res']['status'],'class' => 'alert alert-danger fade in');
+					$this->session->set_flashdata('msg', $messge);
+					redirect('admindept/governing#list' );
+				}
+
+				}else {
+					 redirect('/login');
+				}
+			}
+
+
+			public function change_governing_council_position(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				 if($user_type=='1'){
+					 $position = $this->input->post('position');
+					 $this->admindeptmodel->change_governing_council_position($position);
+				 }else{
+
+				 }
 			}
 
 

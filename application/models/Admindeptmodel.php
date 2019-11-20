@@ -285,8 +285,59 @@ Class Admindeptmodel extends CI_Model
     }
 
 
+    function create_governing_council($name,$desgination,$description,$filename,$status,$user_id){
+      $get_postion="SELECT * FROM tbl_governing_council order by id desc limit 1";
+      $result_postion=$this->db->query($get_postion);
+      foreach($result_postion->result() as $rows_position){}
+      $postion=$rows_position->file_position+1;
+      $insert="INSERT INTO tbl_governing_council (name,desgination,description,file_upload,file_position,status,updated_at,updated_by) VALUES('$name','$desgination','$description','$filename','$postion','$status',NOW(),'$user_id')";
+      $result=$this->db->query($insert);
+      if($result){
+          $data = array("status" => "success");
+            return $data;
+      }else{
+        $data = array("status" => "failed");
+          return $data;
+      }
+    }
 
 
+
+    function get_governing_council(){
+      $select="SELECT * FROM tbl_governing_council ORDER BY file_position ASC";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+    function get_governing_council_edit($dy_id){
+      $dt_id=base64_decode($dy_id)/98765;
+      $select="SELECT * FROM tbl_governing_council WHERE id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function update_governing_council($id,$name,$desgination,$description,$filename,$status,$user_id){
+      $update="UPDATE tbl_governing_council SET name='$name',desgination='$desgination',description='$description',file_upload='$filename',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+      $result=$this->db->query($update);
+        if($result){
+            $data = array("status" => "success");
+              return $data;
+        }else{
+          $data = array("status" => "failed");
+            return $data;
+        }
+    }
+
+
+    function change_governing_council_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+                $sql = "UPDATE tbl_governing_council SET file_position='$i' WHERE id='$value'";
+             $query = $this->db->query($sql);
+            $i++;
+            }
+    }
 
 }
 ?>
