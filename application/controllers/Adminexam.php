@@ -6,7 +6,7 @@ class Adminexam extends CI_Controller {
 			 parent::__construct();
 			    $this->load->helper('url');
 			    $this->load->library('session');
-				  $this->load->model('offersmodel');
+				  // $this->load->model('offersmodel');
 					$this->load->model('adminexammodel');
 
 	 }
