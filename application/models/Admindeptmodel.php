@@ -78,13 +78,13 @@ Class Admindeptmodel extends CI_Model
   }
 
 
-  function create_dept_staff($dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id){
+  function create_dept_staff($dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$profilefile,$status,$user_id){
       $dt_id=base64_decode($dept_id)/98765;
     $get_postion="SELECT * FROM dept_faculty WHERE dept_id='$dt_id' order by id desc limit 1";
     $result_postion=$this->db->query($get_postion);
     foreach($result_postion->result() as $rows_position){}
     $postion=$rows_position->faculty_position+1;
-    $insert="INSERT INTO dept_faculty (dept_id,faculty_name,desgination,faculty_position,degree,file_upload,experience,faculty_email,status,updated_at,updated_by) VALUES('$dt_id','$faculty_name','$desgination','$postion','$degree','$filename','$experience','$faculty_email','$status',NOW(),'$user_id')";
+    $insert="INSERT INTO dept_faculty (dept_id,faculty_name,desgination,faculty_position,degree,file_upload,profile_file,experience,faculty_email,status,updated_at,updated_by) VALUES('$dt_id','$faculty_name','$desgination','$postion','$degree','$filename','$profilefile','$experience','$faculty_email','$status',NOW(),'$user_id')";
     $result=$this->db->query($insert);
     if($result){
         $data = array("status" => "success");
@@ -124,8 +124,8 @@ Class Admindeptmodel extends CI_Model
   }
 
 
-  function update_dept_staff($id,$dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id){
-    $update="UPDATE dept_faculty SET faculty_name='$faculty_name',desgination='$desgination',degree='$degree',experience='$experience',faculty_email='$faculty_email',file_upload='$filename',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+  function update_dept_staff($id,$dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$profilefile,$status,$user_id){
+    $update="UPDATE dept_faculty SET faculty_name='$faculty_name',desgination='$desgination',degree='$degree',experience='$experience',faculty_email='$faculty_email',file_upload='$filename',profile_file='$profilefile',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
 
     $result=$this->db->query($update);
       if($result){
@@ -337,6 +337,14 @@ Class Admindeptmodel extends CI_Model
              $query = $this->db->query($sql);
             $i++;
             }
+    }
+
+
+
+    function view_alumni(){
+      $select="SELECT * FROM tbl_alumni ORDER BY id desc";
+      $result=$this->db->query($select);
+      return $result->result();
     }
 
 }

@@ -156,7 +156,19 @@ class Admindept extends CI_Controller {
 			 $profilepic = $uploaddir.$filename;
 			 move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
 		 }
-		 $data['res']=$this->admindeptmodel->create_dept_staff($dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id);
+
+		 $file_profile = $_FILES['profile_upload']['name'];
+		 if(empty($file_profile)){
+		 $profilefile=' ';
+	 }else{
+		 $temp_1 = pathinfo($file_profile, PATHINFO_EXTENSION);
+		 $profilefile = round(microtime(true)) . '.' . $temp_1;
+		 $uploaddir_1 = 'assets/staff/profile/';
+		 $profilepic_1 = $uploaddir_1.$profilefile;
+		 move_uploaded_file($_FILES['profile_upload']['tmp_name'], $profilepic_1);
+	 }
+
+		 $data['res']=$this->admindeptmodel->create_dept_staff($dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$profilefile,$status,$user_id);
 		 if($data['res']['status']=="success"){
 			 $messge = array('message' => 'Successfully Created','class' => 'alert alert-success fade in');
 			 $this->session->set_flashdata('msg', $messge);
@@ -215,6 +227,7 @@ class Admindept extends CI_Controller {
 			$faculty_email=$this->db->escape_str($this->input->post('faculty_email'));
 			$status=$this->db->escape_str($this->input->post('status'));
 			$old_pic=$this->db->escape_str($this->input->post('old_pic'));
+			$old_profile_file=$this->db->escape_str($this->input->post('old_profile_file'));
 			$profilepic = $_FILES['file_upload']['name'];
 			if(empty($profilepic)){
 			$filename=$old_pic;
@@ -225,7 +238,20 @@ class Admindept extends CI_Controller {
 			$profilepic = $uploaddir.$filename;
 			move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
 		}
-		$data['res']=$this->admindeptmodel->update_dept_staff($id,$dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$status,$user_id);
+		$file_profile = $_FILES['profile_upload']['name'];
+		if(empty($file_profile)){
+		$profilefile=$old_profile_file;
+	}else{
+		$temp_1 = pathinfo($file_profile, PATHINFO_EXTENSION);
+		$profilefile = round(microtime(true)) . '.' . $temp_1;
+		$uploaddir_1 = 'assets/staff/profile/';
+		$profilepic_1 = $uploaddir_1.$profilefile;
+		move_uploaded_file($_FILES['profile_upload']['tmp_name'], $profilepic_1);
+	}
+
+
+
+		$data['res']=$this->admindeptmodel->update_dept_staff($id,$dept_id,$faculty_name,$desgination,$degree,$experience,$faculty_email,$filename,$profilefile,$status,$user_id);
 		if($data['res']['status']=="success"){
 			$messge = array('message' => 'Successfully Updated','class' => 'alert alert-success fade in');
 			$this->session->set_flashdata('msg', $messge);
@@ -649,6 +675,22 @@ class Admindept extends CI_Controller {
 				 }else{
 
 				 }
+			}
+
+
+
+			public function view_alumni(){
+				$data=$this->session->userdata();
+				$user_id=$this->session->userdata('user_id');
+				$user_type=$this->session->userdata('user_role');
+				if($user_type=='1'){
+					$data['res']=$this->admindeptmodel->view_alumni();
+					$this->load->view('admin/admin_header');
+					$this->load->view('admin/alumni/view_alumni',$data);
+					$this->load->view('admin/admin_footer');
+				}else {
+					 redirect('/login');
+				}
 			}
 
 

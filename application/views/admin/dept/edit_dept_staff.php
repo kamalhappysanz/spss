@@ -29,6 +29,7 @@
                           <input type="text" class="form-control" id="faculty_name" name="faculty_name" placeholder="Faculty name" value="<?php echo $rows->faculty_name; ?>">
                           <input type="hidden" class="form-control" id="id" name="id"  value="<?php echo $rows->id; ?>">
                           <input type="hidden" class="form-control" id="old_pic" name="old_pic"  value="<?php echo $rows->file_upload; ?>">
+                          <input type="hidden" class="form-control" id="old_profile_file" name="old_profile_file"  value="<?php echo $rows->profile_file; ?>">
                           <input type="hidden" class="form-control" id="dept_id" name="dept_id"  value="<?php echo base64_encode($rows->dept_id*98765); ?>">
                         </div>
                       </div>
@@ -70,7 +71,12 @@
                     </div>
 
                     <div class="row">
-
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="username">Upload Profile file</label>
+                          <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
+                        </div>
+                      </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="exampleFormControlSelect3">Status</label>

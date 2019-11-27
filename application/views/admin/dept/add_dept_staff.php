@@ -55,7 +55,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="username">Profile Picture</label>
+                          <label for="username">Profile image</label>
                           <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
                         </div>
                       </div>
@@ -68,7 +68,12 @@
                     </div>
 
                     <div class="row">
-
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="username">Profile </label>
+                          <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
+                        </div>
+                      </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="exampleFormControlSelect3">Status</label>
@@ -102,7 +107,7 @@
                 <div class="card-body"  >
                   <h4 class="card-title">List of Department staff</h4>
 
-              <table id="example" class="table table-striped table-bordered">
+              <table id="" class="table table-striped table-bordered">
       <thead >
           <tr>
               <th>S.no</th>
@@ -119,7 +124,7 @@
         <?php $i=1; foreach($res as $rows){ ?>
           <tr id="<?php echo $rows->id; ?>">
               <td><?php echo $i; ?></td>
-              <td><?php echo $rows->faculty_name; ?>  </td>
+              <td><a href="<?php echo base_url(); ?>assets/staff/profile/<?php echo $rows->profile_file; ?>"><?php echo $rows->faculty_name; ?> </a> </td>
               <td><?php echo $rows->desgination; ?>  </td>
               <td><img src="<?php echo base_url(); ?>assets/staff/<?php echo $rows->file_upload; ?>" style="width:100px;">  </td>
               <td><?php echo $rows->faculty_position	; ?> </td>
@@ -149,6 +154,7 @@
 
           faculty_name:{required:true},
           file_upload:{required:true},
+          profile_upload:{required:true},
           degree:{required:true},
           experience:{required:true},
           faculty_email	:{required:true},
@@ -157,6 +163,7 @@
       messages: {
           faculty_name:{required:"enter  name"},
           file_upload:{required:"select  profile picture"},
+          profile_upload:{required:"select  profile file"},
           degree:{required:"enter  degree"},
           faculty_email:{required:"enter  email"},
           experience:{required:"enter  experience"},

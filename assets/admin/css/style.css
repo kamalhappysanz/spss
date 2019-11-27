@@ -7934,8 +7934,8 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 12.5px;
-  padding-left: 12.5px;
+  /* padding-right: 12.5px;
+  padding-left: 12.5px; */
   margin-right: auto;
   margin-left: auto; }
 

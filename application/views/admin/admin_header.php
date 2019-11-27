@@ -71,6 +71,7 @@ th{
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/governing">Governing Council </a></li>
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/">Departments </a></li>
 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam </a></li> -->
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/view_alumni">View Alumni </a></li>
 
                 </ul>
               </div>
@@ -93,22 +94,27 @@ th{
        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 1; ?>">View Student union </a></li>
        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 2; ?>">View Downloads </a></li>
        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 3; ?>">View Syllabi </a></li>
+       <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 4; ?>">View Academic Calender </a></li>
 
                      </ul>
                      </div>
                      <div class="col-group col-md-3">
                        <ul class="submenu-item">
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 11; ?>">View SPIC Member </a></li>
+
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 5; ?>">View Committee </a></li>
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 7; ?>">View Sports </a></li>
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 6; ?>">View Extra Curricular Activity </a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 10; ?>">View Placements </a></li>
+
                          </ul>
                      </div>
                      <div class="col-group col-md-3">
+                       <p class="category-heading">CIIPC </p>
                        <ul class="submenu-item">
                 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam  </a></li> -->
-                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 4; ?>">View Academic Calender </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 9; ?>">View SPIC </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 8; ?>">View Events </a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 9; ?>">View CIIPC SPIC Member</a></li>
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 8; ?>">View CIIPC Events </a></li>
 
                        </ul>
                      </div>
