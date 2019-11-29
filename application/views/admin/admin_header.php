@@ -105,7 +105,7 @@ th{
            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 2; ?>">View Downloads </a></li>
            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 3; ?>">View Syllabi </a></li>
            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 4; ?>">View Academic Calender </a></li>
-
+           <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 12; ?>">View Placements Activites </a></li>
                      </ul>
                      </div>
                      <div class="col-group col-md-3">
@@ -115,7 +115,7 @@ th{
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 5; ?>">View Committee </a></li>
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 7; ?>">View Sports </a></li>
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 6; ?>">View Extra Curricular Activity </a></li>
-<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 10; ?>">View Placements </a></li>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 10; ?>">View Placements Records </a></li>
 
                          </ul>
                      </div>
@@ -125,7 +125,7 @@ th{
                 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam  </a></li> -->
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 9; ?>">View CIIPC SPIC Member</a></li>
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 8; ?>">View CIIPC Events </a></li>
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/ciipc_photos/<?php echo 8; ?>">
+                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/ciipc_photos/">
                            Create CIIPC Photos </a></li>
 
                        </ul>
