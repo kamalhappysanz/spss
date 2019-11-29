@@ -84,9 +84,9 @@
               <td><a target="_blank" href="<?php echo base_url(); ?>assets/autonomous_exam/<?php echo $rows->file_upload; ?>"><?php echo $rows->title; ?></a>  </td>
               <td><?php echo $rows->file_position; ?> </td>
               <td><?php if($rows->status=='Inactive'){ ?>
-              <button type="button" class="btn btn-danger btn-fw">Inactive</button>
+              <button type="button" class="badge badge-danger btn-fw">Inactive</button>
             <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
+              <button type="button" class="badge badge-success btn-fw">Active</button>
             <?php   } ?></td>
             <td><a href="<?php echo base_url(); ?>adminexam/get_autonomous_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
             </td>

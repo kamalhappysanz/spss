@@ -109,9 +109,9 @@
               <td><img src="<?php echo base_url(); ?>assets/council/<?php echo $rows->file_upload; ?>" style="width:100px;">  </td>
               <td><?php echo $rows->file_position; ?> </td>
               <td><?php if($rows->status=='Inactive'){ ?>
-              <button type="button" class="btn btn-danger btn-fw">Inactive</button>
+              <button type="button" class="badge badge-danger btn-fw">Inactive</button>
             <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
+              <button type="button" class="badge badge-success btn-fw">Active</button>
             <?php   } ?></td>
             <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_governing_council_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
 

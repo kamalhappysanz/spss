@@ -103,9 +103,9 @@
               <td><?php echo $rows->dept_name; ?>  </td>
               <td><?php echo $rows->dept_position; ?> </td>
               <td><?php if($rows->status=='Inactive'){ ?>
-              <button type="button" class="btn btn-danger btn-fw">Inactive</button>
+              <button type="button" class="badge badge-danger btn-fw">Inactive</button>
             <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
+              <button type="button" class="badge badge-success btn-fw">Active</button>
             <?php   } ?></td>
             <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
               <a title="Add or View Staff" href="<?php echo base_url(); ?>admindept/add_dept_staff/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-user" aria-hidden="true"></i></a> &nbsp;&nbsp;

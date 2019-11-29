@@ -98,9 +98,9 @@
               <td><?php echo $rows->lab_position; ?> </td>
               <td><img src="<?php echo base_url(); ?>assets/lab/<?php echo $rows->lab_image; ?>" style="width:150px;heigth:50px!important;">  </td>
               <td><?php if($rows->status=='Inactive'){ ?>
-              <button type="button" class="btn btn-danger btn-fw">Inactive</button>
+              <button type="button" class="badge badge-danger btn-fw">Inactive</button>
             <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
+              <button type="button" class="badge badge-success btn-fw">Active</button>
             <?php   } ?></td>
             <td><a title="Update" href="<?php echo base_url(); ?>admindept/get_dept_lab_edit/<?php echo base64_encode($rows->id*98765); ?>"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;
 

@@ -72,9 +72,9 @@
               <td><?php echo $rows->banner_title; ?>  </td>
                 <td><img src="<?php echo base_url(); ?>assets/banners/<?php echo $rows->banner_img; ?>" style="width:150px;height:100px;">  </td>
                 <td><?php if($rows->status=='Inactive'){ ?>
-                <button type="button" class="btn btn-danger btn-fw">Inactive</button>
+                <button type="button" class="badge badge-danger btn-fw">Inactive</button>
             <?php   }else{ ?>
-              <button type="button" class="btn btn-success btn-fw">Active</button>
+              <button type="button" class="badge badge-success btn-fw">Active</button>
             <?php   }
                ?></td>
                <?php if($role=='6'){

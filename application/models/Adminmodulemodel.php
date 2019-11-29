@@ -92,7 +92,57 @@ Class Adminmodulemodel extends CI_Model
 
 
 
+  function create_ciipc_photos($title,$status,$filename,$profilefile,$user_id){
+    $get_postion="SELECT * FROM tbl_ciipc_photos order by id desc limit 1";
+    $result_postion=$this->db->query($get_postion);
+    foreach($result_postion->result() as $rows_position){}
+    $postion=$rows_position->file_position+1;
+    $insert="INSERT INTO tbl_ciipc_photos (title,image_1,image_2,file_position,status,updated_at,updated_by) VALUES('$title','$filename','$profilefile','$postion','$status',NOW(),'$user_id')";
+    $result=$this->db->query($insert);
+    if($result){
+        $data = array("status" => "success");
+          return $data;
+    }else{
+      $data = array("status" => "failed");
+        return $data;
+    }
+  }
 
+    function view_ciipc_photos(){
+      $select="SELECT * FROM tbl_ciipc_photos ORDER BY file_position asc";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function get_ciipc_photos_edit($id){
+      $dt_id=base64_decode($id)/98765;
+      $select="SELECT * FROM tbl_ciipc_photos WHERE id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function update_ciipc_photos($id,$title,$status,$filename,$profilefile,$user_id){
+      $update="UPDATE tbl_ciipc_photos SET title='$title',image_1='$filename',image_2='$profilefile',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+      $result=$this->db->query($update);
+        if($result){
+            $data = array("status" => "success");
+              return $data;
+        }else{
+          $data = array("status" => "failed");
+            return $data;
+        }
+    }
+
+    function change_ciipc_photos_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+                    $sql = "UPDATE tbl_ciipc_photos SET file_position='$i' WHERE id='$value'";
+                    $query = $this->db->query($sql);
+            $i++;
+            }
+        }
 
 
 }
