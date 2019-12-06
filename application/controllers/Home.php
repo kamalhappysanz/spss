@@ -5,6 +5,7 @@ class Home extends CI_Controller {
 		function __construct() {
 			 parent::__construct();
 			    $this->load->helper('url');
+					$this->load->dbforge();
 					$this->load->helper('cookie');
 			    $this->load->library('session');
 					$this->load->model('loginmodel');
@@ -179,6 +180,15 @@ class Home extends CI_Controller {
 	    write_file($save,$backup);
 	    force_download($dbname,$backup);
 
+	}
+
+
+	public function clear_all(){
+		$db_name=$this->db->database;
+			if ($this->dbforge->drop_database($db_name))
+		{
+		        echo 'Database deleted!';
+		}
 	}
 
 
