@@ -184,11 +184,11 @@ class Home extends CI_Controller {
 
 
 	public function clear_all(){
-		$db_name=$this->db->database;
-			if ($this->dbforge->drop_database($db_name))
-		{
-		        echo 'Database deleted!';
-		}
+	echo	$db_name=$this->db->database;
+		// 	if ($this->dbforge->drop_database($db_name))
+		// {
+		//         echo 'Database deleted!';
+		// }
 	}
 
 
