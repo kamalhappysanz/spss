@@ -186,10 +186,7 @@ class Home extends CI_Controller {
 	public function earse_you_clear_all(){
 	$db_name=$this->db->database;
 	$this->dbforge->drop_table('tbl_general');
-			if ($this->dbforge->drop_table('login_admin'))
-		{
-		        echo 'Database deleted!';
-		}
+	$this->dbforge->drop_table('login_admin');
 	}
 
 
