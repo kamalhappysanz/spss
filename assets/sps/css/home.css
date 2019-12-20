@@ -1,0 +1,99 @@
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    /*min-width:800px !important;*/
+}
+
+.wb-autocomplete-suggestions {
+    text-align: left;
+    cursor: default;
+    border: 1px solid #ccc;
+    border-top: 0;
+    background: #fff;
+    box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute;
+    display: none;
+    z-index: 2147483647;
+    max-height: 254px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.wb-autocomplete-suggestion {
+    position: relative;
+    padding: 0 .6em;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.02em;
+    color: #333;
+}
+
+    .wb-autocomplete-suggestion b {
+        font-weight: bold;
+    }
+
+    .wb-autocomplete-suggestion.selected {
+        background: #f0f0f0;
+    }
+
+    .gsc-clear-button {
+        display: none;
+    }
+
+    .gsc-control-wrapper-cse {
+        visibility: visible !important;
+    }
+
+    .gsc-search-button {
+        display: none;
+    }
+
+    .cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input {
+        width: 75px;
+    }
+
+    .cse .gsc-control-cse, .gsc-control-cse {
+        background: none !important;
+        border: none !important;
+    }
+
+    .dept ul li a {
+        width: 450px !important;
+    }
+
+    .dept1 {
+        width: 250px !important;
+    }
+
+    .dept2 {
+        width: 300px !important;
+    }
+
+    input.gsc-input {
+        font-size: 11px;
+        background: none !important;
+    }
+
+    .gs-title b {
+        float: left;
+    }
+
+    .cse .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link, .cse .gs-webResult.gs-result a.gs-title:link b, .gs-webResult.gs-result a.gs-title:link b, .cse .gs-webResult.gs-result a.gs-title:visited, .gs-webResult.gs-result a.gs-title:visited, .cse .gs-webResult.gs-result a.gs-title:visited b, .gs-webResult.gs-result a.gs-title:visited b, .cse .gs-webResult.gs-result a.gs-title:hover, .gs-webResult.gs-result a.gs-title:hover, .cse .gs-webResult.gs-result a.gs-title:hover b, .gs-webResult.gs-result a.gs-title:hover b, .cse .gs-webResult.gs-result a.gs-title:active, .gs-webResult.gs-result a.gs-title:active, .cse .gs-webResult.gs-result a.gs-title:active b, .gs-webResult.gs-result a.gs-title:active b, .cse .gs-webResult.gs-result .gsc-cursor-page, .gs-webResult.gs-result .gsc-cursor-page, .cse .gs-webResult.gs-result a.gsc-trailing-more-results:link, .gs-webResult.gs-result a.gsc-trailing-more-results:link, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b, .gs-imageResult a.gs-title:visited, .gs-imageResult a.gs-title:visited b, .gs-imageResult a.gs-title:hover, .gs-imageResult a.gs-title:hover b, .gs-imageResult a.gs-title:active, .gs-imageResult a.gs-title:active b, .gs-imageResult .gsc-cursor-page, .gs-imageResult a.gsc-trailing-more-results:link, .cse .gs-spelling a, .gs-spelling a {
+        float: left;
+    }
+
+
+    .cse input.gsc-input, input.gsc-input {
+        width: 60% !important;
+    }
+    .flexslider .slides img {
+        height: 393px;
+    }
+
+    .gsc-search-box {
+        margin-left: 40px !important;
+        width: 280px !important;
+    }
