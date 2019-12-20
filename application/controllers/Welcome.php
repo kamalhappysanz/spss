@@ -8,6 +8,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('session');
+		$this->load->model('welcomemodel');
 
 	}
 
@@ -15,8 +16,10 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('home');
+		$data['res_banner']=$this->welcomemodel->get_home_banner();
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('home',$data);
 		$this->load->view('footer');
 	}
 	public function terms()

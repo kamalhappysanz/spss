@@ -15,7 +15,17 @@
                     <div class="flexslider">
                         <ul class="slides">
 
-                             <li>
+                          <?php  if(empty($res_banner)){
+
+                          }else{
+                            foreach($res_banner as $rows_banner){ ?>
+                              <li>
+                                  <a target="_blank" href=""> <img alt="" src="<?php echo base_url(); ?>assets/banners/<?php echo $rows_banner->banner_img; ?>" /></a>
+                              </li>
+                          <?php  }
+                          } ?>
+
+                             <!-- <li>
                                 <a target="_blank" href=""> <img alt="" src="uploads/homepage_slide/home1.JPG" /></a>
 
                             <li>
@@ -30,7 +40,7 @@
 
                             <li>
                                 <a target="_blank" href=""> <img alt="" src="uploads/homepage_slide/4.JPG" /></a>
-
+                              </li>   -->
 
                         </ul> <!-- /.slides -->
                     </div> <!-- /.flexslider -->

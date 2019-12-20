@@ -55,19 +55,12 @@
                         <li class="submenu">
                             <a href="dept.php">Departments</a>
                             <ul>
-                                <li><a href="mech-swc.php">Mechanical Engineering (SWC)</a></li>
-                                <li><a href="mech.php">Mechanical Engineering</a></li>
-                                <li><a href="Instrumentation.php">Instrumentation &amp; Control Engineering</a></li>
-                                <li><a href="chemical.php">Chemical Engineering</a></li>
-                                <li><a href="computer.php">Computer Engineering</a></li>
-                                <li><a href="electronics.php">Electronics and Communication Engineering</a></li>
-                                <li><a href="automobile.php">Automobile Engineering</a></li>
-                                <li><a href="Department.php?Dept=69">Mechanical Engineering (Part Time)</a></li>
-                                <li><a href="maths.php">Maths</a></li>
-                                <li><a href="physics.php">Physics</a></li>
-                                <li><a href="chemistry.php">Chemistry</a></li>
-                                <li><a href="Humanities.php">Humanities</a></li>
+                                <?php if(!empty($res_dept)){
+                                  foreach($res_dept as $rows_dept){ ?>
+                              <li><a href="<?php echo base_url();  ?>welcome/<?php  echo $rows_dept->id; ?>"><?php  echo $rows_dept->dept_name; ?></a></li>
+                                <?php  }  }else{
 
+                                } ?>
                             </ul>
 
                         </li>
@@ -129,7 +122,7 @@
                 <div class="col-md-2">
                     <div class="logo" style="text-align:left; margin: 1px 140px">
                         <a href="index.php" title="CIT-Sandwich" rel="home">
-                            <img src="images/LOGO.png" alt="CIT-Sandwich" style="padding-bottom: 10px;height: 180px;">
+                            <img src="<?php echo base_url(); ?>assets/sps/images/LOGO.png" alt="CIT-Sandwich" style="padding-bottom: 10px;height: 180px;">
                             <br>
                         </a>
                     </div>
@@ -152,7 +145,7 @@
                         <li><a href="contact.php">Contact</a></li>
 
                     </ul>
-                  
+
                 </div>
                 <!-- /.header-right -->
             </div>
@@ -187,6 +180,14 @@
                                 <li class="submenu dept">
                                     <a href="dept.php">Departments</a>
                                     <ul class=" dept2">
+                                        <?php if(!empty($res_dept)){
+                                          foreach($res_dept as $rows_dept){ ?>
+                                      <li><a href="<?php echo base_url();  ?>welcome/<?php  echo $rows_dept->id; ?>"><?php  echo $rows_dept->dept_name; ?></a></li>
+                                        <?php  }  }else{
+
+                                        } ?>
+                                    </ul>
+                                    <!-- <ul class=" dept2">
                                         <li><a href="mech-swc.php">Mechanical Engineering (SWC)</a></li>
                                         <li><a href="mech.php">Mechanical Engineering</a></li>
                                         <li><a href="Instrumentation.php">Instrumentation &amp; Control Engineering</a></li>
@@ -199,8 +200,7 @@
                                         <li><a href="physics.php">Physics</a></li>
                                         <li><a href="chemistry.php">Chemistry</a></li>
                                         <li><a href="Humanities.php">Humanities</a></li>
-
-                                    </ul>
+                                    </ul> -->
 
                                 </li>
                                 <li><a href="syllabi.php">Syllabi</a></li>
