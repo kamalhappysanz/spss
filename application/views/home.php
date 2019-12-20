@@ -1,6 +1,6 @@
 <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5" style="height: 30px;">
 
-                            <img src="images/new.gif" border="0" style="float:right;margin-right: 1070px;margin-top: -3px;">
+                            <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right: 1070px;margin-top: -3px;">
                             <a href="http://citspc.edu.in/uploads/Placed_Students.pdf" target="_blank">2018-19 Batch Placement-107 students has placed as on 15-03-2019</a> <br><br>
 
 
@@ -102,13 +102,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="alert alert-success" style="text-align:center;">
-                                    <img src="images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
+                                    <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
                                     <a href="http://citspc.edu.in/uploads/FINAL NEWSLETTER 19-20.pdf"> <strong> NEWSLETTER - ODD SEMESTER <br> (2019 - 2020) </strong></a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="alert alert-info" style="text-align:center;">
-                                    <img src="images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
+                                    <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
                                     <a href="http://192.168.13.100:8080/AutoLib/QBSearch/QBSearchServlet?flag=load"><strong>Question Bank</strong> </a>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@
 
 
 
-                                   <img src="images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
+                                   <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
 
                                    <a href="http://citspc.edu.in/uploads/TUITION FEES.jpg" target="_blank">Fees structure for the academic year <br> 2019-2020 (Even Semester)</a><br><br>
 
@@ -294,7 +294,7 @@
                                 <div class="widget-inner">
                                 <div class="prof-list-item clearfix">
                                     <div class="prof-thumb">
-                                        <img src="images/founder1.jpg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/sps/images/founder1.jpg" alt="">
                                     </div> <!-- /.prof-thumb -->
                                     <div class="prof-details">
                                         <h5 class="prof-name-list">Sri.V.Rangaswamy Naidu</h5>
@@ -303,7 +303,7 @@
                                 </div> <!-- /.prof-list-item -->
                                 <div class="prof-list-item clearfix">
                                     <div class="prof-thumb">
-                                        <img src="images/founder2.jpg" alt="Profesor Name">
+                                        <img src="<?php echo base_url(); ?>assets/sps/images/founder2.jpg" alt="Profesor Name">
                                     </div> <!-- /.prof-thumb -->
                                     <div class="prof-details">
                                         <h5 class="prof-name-list">Sri.R.Venkataswamy Naidu B.Sc.(Tech) Manchester </h5>
@@ -312,7 +312,7 @@
                                 </div> <!-- /.prof-list-item -->
                                 <div class="prof-list-item clearfix">
                                     <div class="prof-thumb">
-                                        <img src="images/founder4.JPG" alt="Profesor Name">
+                                        <img src="<?php echo base_url(); ?>assets/sps/images/founder4.JPG" alt="Profesor Name">
                                     </div> <!-- /.prof-thumb -->
                                     <div class="prof-details">
                                         <h5 class="prof-name-list">Prof.P.R.Ramakrishnan M.S.(M.I.T)USA,M.B.A.,F.I.E. </h5>
