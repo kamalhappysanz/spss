@@ -18,13 +18,39 @@ class Welcome extends CI_Controller {
 	{
 		$data['res_banner']=$this->welcomemodel->get_home_banner();
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_announcement']=$this->welcomemodel->get_announcements();
 		$this->load->view('header',$data);
 		$this->load->view('home',$data);
 		$this->load->view('footer');
 	}
-	public function terms()
+
+
+	public function ins_profile()
 	{
-		$this->load->view('terms');
+		$data['res_banner']=$this->welcomemodel->get_home_banner();
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('ins_profile',$data);
+		$this->load->view('footer');
+	}
+
+	public function mission()
+	{
+		$data['res_banner']=$this->welcomemodel->get_home_banner();
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('mission',$data);
+		$this->load->view('footer');
+	}
+
+
+	public function founders()
+	{
+		$data['res_banner']=$this->welcomemodel->get_home_banner();
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('founders',$data);
+		$this->load->view('footer');
 	}
 	public function privacy()
 	{

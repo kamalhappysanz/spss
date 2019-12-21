@@ -110,7 +110,8 @@ th{
                      </div>
                      <div class="col-group col-md-3">
                        <ul class="submenu-item">
-                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 11; ?>">View SPIC Member </a></li>
+
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 11; ?>">View SPIC Member </a></li>
 
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 5; ?>">View Committee </a></li>
 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 7; ?>">View Sports </a></li>
@@ -127,6 +128,9 @@ th{
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 8; ?>">View CIIPC Events </a></li>
                          <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/ciipc_photos/">
                            Create CIIPC Photos </a></li>
+                           <p class="category-heading"> </p>
+                           <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/view_module_data/<?php echo 13; ?>">View Announcements </a></li>
+
 
                        </ul>
                      </div>
