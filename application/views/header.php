@@ -164,9 +164,9 @@
                                 <li><a href="<?php echo base_url(); ?>ins_profile">Institute Profile</a></li>
                                 <li><a href="<?php echo base_url(); ?>mission">Mission & Vision</a></li>
                                 <li><a href="<?php echo base_url(); ?>founders">Founders</a></li>
-                                <li><a href="management.php">Management</a></li>
-                                <li><a href="governing.php">Governing Council</a></li>
-                                <li><a href="course.php">Courses Offered</a></li>
+                                <li><a href="<?php echo base_url(); ?>management">Management</a></li>
+                                <li><a href="<?php echo base_url(); ?>governing">Governing Council</a></li>
+                                <li><a href="<?php echo base_url(); ?>course_offered">Courses Offered</a></li>
 
                             </ul>
 
@@ -176,7 +176,7 @@
                             <a href="#">Academics</a>
                             <ul>
 
-                                <li><a href="admission.php">Admission</a></li>
+                                <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
                                 <li class="submenu dept">
                                     <a href="dept.php">Departments</a>
                                     <ul class=" dept2">
@@ -203,8 +203,8 @@
                                     </ul> -->
 
                                 </li>
-                                <li><a href="syllabi.php">Syllabi</a></li>
-                                <li><a href="academic.php">Academic Calendar</a></li>
+                                <li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
+                                <li><a href="<?php echo base_url(); ?>academic_calendar">Academic Calendar</a></li>
 
                             </ul>
 
@@ -324,7 +324,7 @@
                             <li>
                                 <a href="#">Facilities</a>
                                 <ul class="sub-menu">
-                                    <li><a href="library.php">Library</a>
+                                    <li><a href="<?php echo base_url(); ?>library">Library</a>
                                         <ul class="sub-menu">
                                             <li><a href="http://192.168.13.100:8080/AutoLib/" target="_blank">Web OPAC</a></li>
                                         </ul>

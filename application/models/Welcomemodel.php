@@ -74,6 +74,10 @@ Class Welcomemodel extends CI_Model
           $query = $this->db->where(['status'=>'Active','tbl_master_id'=>'13'])->order_by('file_position', 'ASC')->get('tbl_general');
           return $query->result();
        }
+       function get_governing_council(){
+          $query = $this->db->where(['status'=>'Active'])->order_by('file_position', 'ASC')->get('tbl_governing_council');
+          return $query->result();
+       }
 
 
 }

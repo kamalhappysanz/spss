@@ -27,7 +27,6 @@ class Welcome extends CI_Controller {
 
 	public function ins_profile()
 	{
-		$data['res_banner']=$this->welcomemodel->get_home_banner();
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$this->load->view('header',$data);
 		$this->load->view('ins_profile',$data);
@@ -36,7 +35,6 @@ class Welcome extends CI_Controller {
 
 	public function mission()
 	{
-		$data['res_banner']=$this->welcomemodel->get_home_banner();
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$this->load->view('header',$data);
 		$this->load->view('mission',$data);
@@ -46,19 +44,73 @@ class Welcome extends CI_Controller {
 
 	public function founders()
 	{
-		$data['res_banner']=$this->welcomemodel->get_home_banner();
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$this->load->view('header',$data);
 		$this->load->view('founders',$data);
 		$this->load->view('footer');
 	}
-	public function privacy()
+
+	public function management()
 	{
-		$this->load->view('privacy');
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('management',$data);
+		$this->load->view('footer');
 	}
-	public function refund()
+
+
+	public function governing()
 	{
-		$this->load->view('refund');
+		$data['res_council']=$this->welcomemodel->get_governing_council();
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('governing',$data);
+		$this->load->view('footer');
+	}
+
+
+
+	public function course_offered()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('course_offered',$data);
+		$this->load->view('footer');
+	}
+
+	public function admission()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('admission',$data);
+		$this->load->view('footer');
+	}
+
+	public function syllabi()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_syllabi']=$this->welcomemodel->get_syllabi();
+		$this->load->view('header',$data);
+		$this->load->view('syllabi',$data);
+		$this->load->view('footer');
+	}
+
+
+	public function academic_calendar()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_calendar']=$this->welcomemodel->get_academic_calendar();
+		$this->load->view('header',$data);
+		$this->load->view('academic_calendar',$data);
+		$this->load->view('footer');
+	}
+
+	public function library()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('library',$data);
+		$this->load->view('footer');
 	}
 
 

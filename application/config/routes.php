@@ -58,6 +58,17 @@ $route['index'] = 'welcome/index';
 $route['ins_profile'] = 'welcome/ins_profile';
 $route['mission'] = 'welcome/mission';
 $route['founders'] = 'welcome/founders';
+$route['management'] = 'welcome/management';
+$route['governing'] = 'welcome/governing';
+$route['course_offered'] = 'welcome/course_offered';
+$route['admission'] = 'welcome/admission';
+$route['syllabi'] = 'welcome/syllabi';
+$route['academic_calendar'] = 'welcome/academic_calendar';
+$route['library'] = 'welcome/library';
+
+
+
+
 $route['privacy'] = 'welcome/privacy';
 $route['refund'] = 'welcome/refund';
 
