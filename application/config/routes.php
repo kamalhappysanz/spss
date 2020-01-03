@@ -65,6 +65,7 @@ $route['admission'] = 'welcome/admission';
 $route['syllabi'] = 'welcome/syllabi';
 $route['academic_calendar'] = 'welcome/academic_calendar';
 $route['library'] = 'welcome/library';
+$route['dept'] = 'welcome/dept';
 
 
 

@@ -178,11 +178,11 @@
 
                                 <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
                                 <li class="submenu dept">
-                                    <a href="dept.php">Departments</a>
+                                    <a href="<?php echo base_url(); ?>dept">Departments</a>
                                     <ul class=" dept2">
                                         <?php if(!empty($res_dept)){
                                           foreach($res_dept as $rows_dept){ ?>
-                                      <li><a href="<?php echo base_url();  ?>welcome/<?php  echo $rows_dept->id; ?>"><?php  echo $rows_dept->dept_name; ?></a></li>
+                                      <li><a href="<?php echo base_url();  ?>welcome/dept_details/<?php  echo base64_encode($rows_dept->id*98765); ?>"><?php  echo $rows_dept->dept_name; ?></a></li>
                                         <?php  }  }else{
 
                                         } ?>

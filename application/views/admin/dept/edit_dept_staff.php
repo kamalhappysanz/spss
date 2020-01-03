@@ -59,7 +59,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Upload new picture</label>
-                          <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
+                            <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -74,7 +74,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Upload Profile file</label>
-                          <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
+
+                          <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
                         </div>
                       </div>
                       <div class="col-md-6">

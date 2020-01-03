@@ -56,7 +56,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="username">Profile image</label>
-                          <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
+                            <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
+
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -70,8 +71,8 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="username">Profile </label>
-                          <input type="file" class="form-control" id="profile_upload" name="profile_upload" placeholder="">
+                          <label for="username">Profile file</label>
+                          <input type="file" class="form-control" id="file_upload" name="file_upload" placeholder="">
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -124,9 +125,9 @@
         <?php $i=1; foreach($res as $rows){ ?>
           <tr id="<?php echo $rows->id; ?>">
               <td><?php echo $i; ?></td>
-              <td><a href="<?php echo base_url(); ?>assets/staff/profile/<?php echo $rows->profile_file; ?>"><?php echo $rows->faculty_name; ?> </a> </td>
+              <td><a href="<?php echo base_url(); ?>assets/staff/<?php echo $rows->profile_file; ?>"><?php echo $rows->faculty_name; ?> </a> </td>
               <td><?php echo $rows->desgination; ?>  </td>
-              <td><img src="<?php echo base_url(); ?>assets/staff/<?php echo $rows->file_upload; ?>" style="width:100px;">  </td>
+              <td><img src="<?php echo base_url(); ?>assets/staff/profile/<?php echo $rows->profile_file; ?>" style="width:100px;">  </td>
               <td><?php echo $rows->faculty_position	; ?> </td>
               <td><?php if($rows->status=='Inactive'){ ?>
               <button type="button" class="badge badge-danger btn-fw">Inactive</button>

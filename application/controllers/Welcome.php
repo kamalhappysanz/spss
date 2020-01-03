@@ -113,6 +113,34 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function dept()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('dept',$data);
+		$this->load->view('footer');
+	}
+
+
+	public function dept_details()
+	{
+	 	$dept_id=$this->uri->segment(3);
+		$data['res_faculty']=$this->welcomemodel->get_dept_faculty($dept_id);
+		$data['res_lab_facility']=$this->welcomemodel->get_dept_facility($dept_id);
+		$data['res_syllabus_activity']=$this->welcomemodel->get_syllabus_activity($dept_id);
+		$data['res_dept_info']=$this->welcomemodel->get_dept_info($dept_id);
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('dept_details',$data);
+		$this->load->view('footer');
+	}
+
+
+
+
+
+
+
 
 	public function login()
 	{
