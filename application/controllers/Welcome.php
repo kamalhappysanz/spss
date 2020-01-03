@@ -128,6 +128,7 @@ class Welcome extends CI_Controller {
 		$data['res_faculty']=$this->welcomemodel->get_dept_faculty($dept_id);
 		$data['res_lab_facility']=$this->welcomemodel->get_dept_facility($dept_id);
 		$data['res_syllabus_activity']=$this->welcomemodel->get_syllabus_activity($dept_id);
+		$data['res_association_activity']=$this->welcomemodel->get_association_activity($dept_id);
 		$data['res_dept_info']=$this->welcomemodel->get_dept_info($dept_id);
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$this->load->view('header',$data);

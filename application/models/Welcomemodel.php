@@ -94,9 +94,16 @@ Class Welcomemodel extends CI_Model
        }
        function get_syllabus_activity($dept_id){
          $id=base64_decode($dept_id)/98765;
-         $query = $this->db->where(['status'=>'Active','dept_id'=>$id])->order_by('file_position', 'ASC')->get('dept_syllabus_activity');
+         $query = $this->db->where(['status'=>'Active','syllabus_association'=>'Syllabus','dept_id'=>$id])->order_by('file_position', 'ASC')->get('dept_syllabus_activity');
          return $query->result();
        }
+
+       function get_association_activity($dept_id){
+         $id=base64_decode($dept_id)/98765;
+         $query = $this->db->where(['status'=>'Active','syllabus_association'=>'Association','dept_id'=>$id])->order_by('file_position', 'ASC')->get('dept_syllabus_activity');
+         return $query->result();
+       }
+
        function get_dept_info($dept_id){
          $id=base64_decode($dept_id)/98765;
          $query = $this->db->where(['status'=>'Active','id'=>$id])->order_by('dept_position', 'ASC')->get('tbl_departments');

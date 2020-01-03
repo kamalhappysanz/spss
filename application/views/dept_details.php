@@ -52,7 +52,7 @@
                                                <div class="">
                                                  <div class="blog-grid-thumb centered">
                                                    <a href="">
-                                                       <img class="facultyimg" src="<?php echo base_url(); ?>staff/profile/<?php echo $row_faculty->profile_file; ?>" alt="">
+                                                       <img class="facultyimg" src="<?php echo base_url(); ?>assets/staff/profile/<?php echo $row_faculty->profile_file; ?>" alt="">
                                                    </a>
                                                  </div>
                                                  <div class="box-content-inner" style="height:150px;margin-bottom:70px">
@@ -76,16 +76,44 @@
                                      </div>
 
                                     <div class="tab-pane fade" id="section-3">
+                                      <?php if(empty($res_lab_facility)){
+                                        echo "No details Found";
+                                      }else{
+                                        foreach($res_lab_facility as $row_lab_facility){  ?>
+                                          <div class="">
+                                            <h4 class="firsthead"><?php echo $row_lab_facility->lab_name; ?></h4>
+                                            <img src="<?php echo base_url(); ?>assets/lab/<?php echo $row_lab_facility->lab_image; ?>" width="50%">
+                                            <p><?php echo $row_lab_facility->description; ?></p>
+                                          </div>
+                                      <?php  }
+                                      } ?>
+
+
+
+
+
 
 
 										                 </div>
 									                  <div class="tab-pane fade" id="section-4">
                                        <h4>Association Activities</h4>
+                                       <?php if(empty($res_association_activity)){
 
+                                       }else{
+                                         foreach($res_association_activity as $rows_association_activity){ ?>
+                                            <p style="text-align: justify;"> <li><a href="<?php echo base_url(); ?>assets/dept/<?php echo $rows_association_activity->file_name; ?>" target="_blank"> <?php echo $rows_association_activity->ac_sy_name; ?></a></li>
+                                      <?php   }
+                                       } ?>
                                      </div>
                                      <div class="tab-pane fade" id="section-5">
                                        <h4>Syllabus</h4>
+                                       <?php if(empty($res_syllabus_activity)){
 
+                                       }else{
+                                         foreach($res_syllabus_activity as $rows_syllabus_activity){ ?>
+                                            <p style="text-align: justify;"> <li><a href="<?php echo base_url(); ?>assets/dept/<?php echo $rows_association_activity->file_name; ?>" target="_blank"> <?php echo $rows_association_activity->ac_sy_name; ?></a></li>
+                                      <?php   }
+                                       } ?>
 
                                      </div>
                                       <div class="tab-pane fade" id="section-6">
