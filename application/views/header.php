@@ -187,20 +187,7 @@
 
                                         } ?>
                                     </ul>
-                                    <!-- <ul class=" dept2">
-                                        <li><a href="mech-swc.php">Mechanical Engineering (SWC)</a></li>
-                                        <li><a href="mech.php">Mechanical Engineering</a></li>
-                                        <li><a href="Instrumentation.php">Instrumentation &amp; Control Engineering</a></li>
-                                        <li><a href="chemical.php">Chemical Engineering</a></li>
-                                        <li><a href="computer.php">Computer Engineering</a></li>
-                                        <li><a href="electronics.php">Electronics and Communication Engineering</a></li>
-                                        <li><a href="automobile.php">Automobile Engineering</a></li>
-                                        <li><a href="Department.php?Dept=69">Mechanical Engineering (Part Time)</a></li>
-                                        <li><a href="maths.php">Maths</a></li>
-                                        <li><a href="physics.php">Physics</a></li>
-                                        <li><a href="chemistry.php">Chemistry</a></li>
-                                        <li><a href="Humanities.php">Humanities</a></li>
-                                    </ul> -->
+
 
                                 </li>
                                 <li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
@@ -209,53 +196,7 @@
                             </ul>
 
                         </li>
-                        <!-- <li>
-                            <a href="#">Staff</a>
-                            <ul class="dept1">
-                                <li><a href="faculty.php">Faculty</a></li>
-                                <li><a href="facultyadd.php">Faculty With Additional Charges</a></li>
-                                <li><a href="nonteaching.php">Non-Teaching Staff</a></li>
-                                <li><a href="keycontact.php">Key Contacts</a></li>
-                                <li><a href="http://gmail.com/" target="_blank">Webmail</a></li>
 
-                            </ul>
-                        </li> -->
-
-                        <!-- <li>
-                        <li>
-                            <a href="#">Examination</a>
-                            <ul class="dept1">
-                                <li><a href="#">Faculty - Exam Section</a></li>
-                                <li><a href="http://citspc.edu.in/uploads/Examination/Board%20Exam%20Rules.pdf" target="_blank">Board Examination Rules</a></li>
-                                <li><a href="http://citspc.edu.in/uploads/Examination/M-Scheme%20Regulation.pdf" target="_blank">M - Scheme Regulations</a></li>
-                                <li><a href="#">Attendance Particulars</a></li>
-                                <li><a href="http://112.133.214.77/" target="_blank">Board Exam Question Bank</a></li>
-
-                                <li><a href="#">Board Examinations</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Theory Timetable</a></li>
-                                        <li><a href="http://citspc.edu.in/uploads/Examination/Rank%20holders.pdf" target="_blank">Rank Holders</a></li>
-                                        <li><a href="http://citspc.edu.in/uploads/Examination/superlative%20distinction.pdf" target="_blank">Superlative Distinction</a></li>
-                                        <li><a href="http://citspc.edu.in/uploads/Examination/centum%20marks%20in%20theory%20%20subjects.pdf" target="_blank">Centum in Theory Subject</a></li>
-                                        <li><a href="http://citspc.edu.in/uploads/Examination/100per%20att.pdf" target="_blank">100% Attendance</a></li>
-                                        <li><a href="#">College Overall Result</a></li>
-                                        <li><a href="#">Internal Marks</a></li>
-                                        <li><a href="#">Staff 100% result</a></li>
-                                        <li><a href="http://intradote.tn.nic.in/" target="_blank">Student Individual Result</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Board Exam Fees Schedule / Eligibility</a></li>
-                                        <li><a href="http://intradote.tn.nic.in/" target="_blank">E-Governance</a></li>
-                                <li><a href="#">Assessment Test / Model Exam</a>
-                                <ul class="sub-menu">
-                                        <li><a href="#">Timetable</a></li>
-                                        <li><a href="#">Mark Particulars</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        </li> -->
                         <li>
                             <a href="#">Students Corner</a>
                             <ul class="dept1">
@@ -308,7 +249,7 @@
                             <li>
                                 <a href="#">Centres</a>
                                 <ul class="dept1">
-                                    <li><a href="iipchome.php">IIPC Home</a>
+                                    <li><a href="<?php echo base_url(); ?>iipchome">IIPC Home</a>
                                         <ul class="sub-menu">
                                             <li><a href="iipcmission.php">IIPC Objectives</a></li>
                                             <li><a href="iipccommittee.php">IIPC Committees</a></li>
@@ -330,8 +271,8 @@
                                         </ul>
                                     </li>
 
-                                    <li><a href="hostel.php">Hostel</a></li>
-                                    <li><a href="transport.php">Transport</a></li>
+                                    <li><a href="<?php echo base_url(); ?>hostel">Hostel</a></li>
+                                    <li><a href="<?php echo base_url(); ?>transport">Transport</a></li>
                                     <li><a href="<?php echo base_url(); ?>general_facility">General Facilities</a></li>
 
                                 </ul>

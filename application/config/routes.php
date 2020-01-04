@@ -66,6 +66,11 @@ $route['syllabi'] = 'welcome/syllabi';
 $route['academic_calendar'] = 'welcome/academic_calendar';
 $route['library'] = 'welcome/library';
 $route['dept'] = 'welcome/dept';
+$route['general_facility'] = 'welcome/general_facility';
+$route['hostel'] = 'welcome/hostel';
+$route['transport'] = 'welcome/transport';
+$route['iipchome'] = 'welcome/iipchome';
+
 $route['contact'] = 'welcome/contact';
 
 

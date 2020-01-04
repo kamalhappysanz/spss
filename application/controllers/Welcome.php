@@ -145,6 +145,32 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function hostel()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('hostel',$data);
+		$this->load->view('footer');
+	}
+
+
+	public function transport()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('transport',$data);
+		$this->load->view('footer');
+	}
+
+	public function iipchome()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('iipchome',$data);
+		$this->load->view('footer');
+	}
+
+
 	public function contact()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
