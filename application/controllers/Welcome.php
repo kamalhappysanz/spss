@@ -122,6 +122,7 @@ class Welcome extends CI_Controller {
 	}
 
 
+
 	public function dept_details()
 	{
 	 	$dept_id=$this->uri->segment(3);
@@ -136,7 +137,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function general_facility()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('general_facility',$data);
+		$this->load->view('footer');
+	}
 
+	public function contact()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('contact',$data);
+		$this->load->view('footer');
+	}
 
 
 

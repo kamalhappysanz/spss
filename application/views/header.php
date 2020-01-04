@@ -332,7 +332,7 @@
 
                                     <li><a href="hostel.php">Hostel</a></li>
                                     <li><a href="transport.php">Transport</a></li>
-                                    <li><a href="generalfacilities.php">General Facilities</a></li>
+                                    <li><a href="<?php echo base_url(); ?>general_facility">General Facilities</a></li>
 
                                 </ul>
 
@@ -340,7 +340,7 @@
 
                             <li>
 
-                                <a href="contact.php">Contact</a>
+                                <a href="<?php echo base_url(); ?>contact">Contact</a>
                                 <ul class="sub-menu">
                                     <li><a href="http://www.gmail.com">Webmail</a></li>
 
