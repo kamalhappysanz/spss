@@ -230,7 +230,7 @@ class Adminmodule extends CI_Controller {
 			}else{
 				$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
 				$filename = round(microtime(true)) . '.' . $temp;
-				$uploaddir = 'assets/photos/';
+				$uploaddir = 'assets/sps/photos/';
 				$profilepic = $uploaddir.$filename;
 				move_uploaded_file($_FILES['file_upload_1']['tmp_name'], $profilepic);
 			}
@@ -240,7 +240,7 @@ class Adminmodule extends CI_Controller {
 		}else{
 			$temp_1 = pathinfo($file_profile, PATHINFO_EXTENSION);
 			$profilefile =round(microtime(true))+1 . '.' . $temp_1;
-			$uploaddir_1 = 'assets/photos/';
+			$uploaddir_1 = 'assets/sps/photos/';
 			$profilepic_1 = $uploaddir_1.$profilefile;
 			move_uploaded_file($_FILES['file_upload_2']['tmp_name'], $profilepic_1);
 		}
@@ -276,7 +276,7 @@ class Adminmodule extends CI_Controller {
 			}else{
 				$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
 				$filename = round(microtime(true)) . '.' . $temp;
-				$uploaddir = 'assets/photos/';
+				$uploaddir = 'assets/sps/photos/';
 				$profilepic = $uploaddir.$filename;
 				move_uploaded_file($_FILES['file_upload_1']['tmp_name'], $profilepic);
 			}
@@ -286,7 +286,7 @@ class Adminmodule extends CI_Controller {
 		}else{
 			$temp_1 = pathinfo($file_profile, PATHINFO_EXTENSION);
 			$profilefile =round(microtime(true))+1 . '.' . $temp_1;
-			$uploaddir_1 = 'assets/photos/';
+			$uploaddir_1 = 'assets/sps/photos/';
 			$profilepic_1 = $uploaddir_1.$profilefile;
 			move_uploaded_file($_FILES['file_upload_2']['tmp_name'], $profilepic_1);
 		}

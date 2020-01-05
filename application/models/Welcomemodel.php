@@ -79,6 +79,11 @@ Class Welcomemodel extends CI_Model
           return $query->result();
        }
 
+       function get_ciipc_photos(){
+          $query = $this->db->where(['status'=>'Active'])->order_by('file_position', 'ASC')->get('tbl_ciipc_photos');
+          return $query->result();
+       }
+
 
 
        function get_dept_faculty($dept_id){

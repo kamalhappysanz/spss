@@ -232,6 +232,70 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function CIICP_mission()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_mission',$data);
+		$this->load->view('footer');
+	}
+	public function CIICP_mandate()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_mandate',$data);
+		$this->load->view('footer');
+	}
+	public function CIICP_trust()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_ciipc_events();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_trust',$data);
+		$this->load->view('footer');
+	}
+
+	public function CIICP_spic()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_ciipc_spic_members();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_spic',$data);
+		$this->load->view('footer');
+	}
+
+	public function CIICP_courses()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_courses',$data);
+		$this->load->view('footer');
+	}
+
+	public function CIICP_photos()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_ciipc_photos();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_photos',$data);
+		$this->load->view('footer');
+	}
+
+	public function placement()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('placement',$data);
+		$this->load->view('footer');
+	}
+
+
+
+
+
+
+
+
 
 
 

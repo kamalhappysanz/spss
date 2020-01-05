@@ -214,7 +214,7 @@
 
                                 <ul class="dept1">
 
-                                    <li><a href="placement.php">Placement Cell</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement">Placement Cell</a></li>
                                     <li><a href="placementrec.php">Placement Records</a></li>
                                     <li><a href="placementact.php">Placement Activities</a></li>
                                     <li><a href="placementcomp.php">Companies Visited</a></li>
@@ -228,17 +228,17 @@
                             <li>
                                 <a href="#">Committee</a>
                                 <ul class="dept1">
-                                    <li><a href="committee.php">Committees</a></li>
-                                    <li><a href="CIICP_home.php">CIICP Home</a>
+                                    <li><a href="<?php  echo base_url(); ?>committee">Committees</a></li>
+                                    <li><a href="<?php  echo base_url(); ?>CIICP_home">CIICP Home</a>
                                         <ul class="sub-menu">
 
-                                            <li><a href="CIICP_News.php">CIICP Latest Events</a></li>
-                                            <li><a href="CIICP_mission.php">CIICP Mission</a></li>
-                                            <li><a href="CIICP_mandate.php">CIICP Mandate</a></li>
-                                            <li><a href="CIICP_trust.php">CIICP Thrust</a></li>
-                                            <li><a href="CIICP_spic.php">CIICP SPIC </a></li>
-                                            <li><a href="CIICP_courses.php">CIICP Courses Offered</a></li>
-                                            <li><a href="CIICP_photos.php">CIICP Photos</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_News">CIICP Latest Events</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_mission">CIICP Mission</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_mandate">CIICP Mandate</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_trust">CIICP Thrust</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_spic">CIICP SPIC </a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_courses">CIICP Courses Offered</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>CIICP_photos">CIICP Photos</a></li>
 
                                         </ul>
                                     </li>

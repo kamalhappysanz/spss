@@ -90,12 +90,12 @@
                           <td><?php echo $rows->title; ?>  </td>
                           <td><?php if(empty($rows->image_1)){
                           }else{ ?>
-                            <img src="<?php echo base_url(); ?>assets/photos/<?php echo $rows->image_1; ?>" style="width:120px;">
+                            <img src="<?php echo base_url(); ?>assets/sps/photos/<?php echo $rows->image_1; ?>" style="width:120px;">
                           <?php } ?>
                            </td>
                            <td><?php if(empty($rows->image_2)){
                            }else{ ?>
-                             <img src="<?php echo base_url(); ?>assets/photos/<?php echo $rows->image_2; ?>" style="width:120px;">
+                             <img src="<?php echo base_url(); ?>assets/sps/photos/<?php echo $rows->image_2; ?>" style="width:120px;">
                            <?php } ?>
                             </td>
                           <td><?php echo $rows->file_position; ?> </td>

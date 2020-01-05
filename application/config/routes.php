@@ -79,6 +79,20 @@ $route['iipcedc'] = 'welcome/iipcedc';
 $route['committee'] = 'welcome/committee';
 $route['CIICP_home'] = 'welcome/CIICP_home';
 $route['CIICP_News'] = 'welcome/CIICP_News';
+$route['CIICP_mission'] = 'welcome/CIICP_mission';
+$route['CIICP_mandate'] = 'welcome/CIICP_mandate';
+$route['CIICP_trust'] = 'welcome/CIICP_trust';
+$route['CIICP_spic'] = 'welcome/CIICP_spic';
+$route['CIICP_courses'] = 'welcome/CIICP_courses';
+$route['CIICP_photos'] = 'welcome/CIICP_photos';
+
+
+
+$route['placement'] = 'welcome/placement';
+
+
+
+
 
 
 
