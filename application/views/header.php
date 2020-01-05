@@ -251,10 +251,10 @@
                                 <ul class="dept1">
                                     <li><a href="<?php echo base_url(); ?>iipchome">IIPC Home</a>
                                         <ul class="sub-menu">
-                                            <li><a href="iipcmission.php">IIPC Objectives</a></li>
-                                            <li><a href="iipccommittee.php">IIPC Committees</a></li>
-                                            <li><a href="iipcmou.php">IIPC MOUs</a></li>
-                                            <li><a href="iipcedc.php">EDC</a></li>
+                                            <li><a href="<?php  echo base_url(); ?>iipcmission">IIPC Objectives</a></li>
+                                            <li><a href="<?php echo base_url(); ?>iipccommittee">IIPC Committees</a></li>
+                                            <li><a href="<?php echo base_url(); ?>iipcmou">IIPC MOUs</a></li>
+                                            <li><a href="<?php echo base_url(); ?>iipcedc">EDC</a></li>
 
                                         </ul>
                                     </li>

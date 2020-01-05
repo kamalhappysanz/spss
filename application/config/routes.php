@@ -70,6 +70,13 @@ $route['general_facility'] = 'welcome/general_facility';
 $route['hostel'] = 'welcome/hostel';
 $route['transport'] = 'welcome/transport';
 $route['iipchome'] = 'welcome/iipchome';
+$route['iipcmission'] = 'welcome/iipcmission';
+$route['iipccommittee'] = 'welcome/iipccommittee';
+$route['iipcmou'] = 'welcome/iipcmou';
+$route['iipcedc'] = 'welcome/iipcedc';
+
+
+
 
 $route['contact'] = 'welcome/contact';
 

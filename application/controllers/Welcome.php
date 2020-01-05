@@ -170,6 +170,40 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function iipcmission()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('iipcmission',$data);
+		$this->load->view('footer');
+	}
+
+	public function iipccommittee()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('iipccommittee',$data);
+		$this->load->view('footer');
+	}
+
+	public function iipcmou()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('iipcmou',$data);
+		$this->load->view('footer');
+	}
+
+	public function iipcedc()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('iipcedc',$data);
+		$this->load->view('footer');
+	}
+
+
+
 
 	public function contact()
 	{
