@@ -76,6 +76,12 @@ $route['iipcmou'] = 'welcome/iipcmou';
 $route['iipcedc'] = 'welcome/iipcedc';
 
 
+$route['committee'] = 'welcome/committee';
+$route['CIICP_home'] = 'welcome/CIICP_home';
+$route['CIICP_News'] = 'welcome/CIICP_News';
+
+
+
 
 
 $route['contact'] = 'welcome/contact';

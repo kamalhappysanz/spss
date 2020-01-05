@@ -202,6 +202,37 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function committee()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_committee']=$this->welcomemodel->get_committee();
+		$this->load->view('header',$data);
+		$this->load->view('committee',$data);
+		$this->load->view('footer');
+	}
+
+
+
+
+	public function CIICP_home()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_home',$data);
+		$this->load->view('footer');
+	}
+
+
+	public function CIICP_News()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_ciipc_events();
+		$this->load->view('header',$data);
+		$this->load->view('CIICP_News',$data);
+		$this->load->view('footer');
+	}
+
+
 
 
 
