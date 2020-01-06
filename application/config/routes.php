@@ -88,6 +88,18 @@ $route['scholarship'] = 'welcome/scholarship';
 $route['extra'] = 'welcome/extra';
 $route['nss_activites'] = 'welcome/nss_activites';
 $route['sports'] = 'welcome/sports';
+$route['facility'] = 'welcome/facility';
+$route['downloads'] = 'welcome/downloads';
+$route['student_union'] = 'welcome/student_union';
+$route['keycontact'] = 'welcome/keycontact';
+$route['nonteaching'] = 'welcome/nonteaching';
+
+$route['facultyadd'] = 'welcome/facultyadd';
+
+
+
+
+
 
 
 

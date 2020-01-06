@@ -315,7 +315,54 @@ class Welcome extends CI_Controller {
 		$this->load->view('nss_activites',$data);
 		$this->load->view('footer');
 	}
+	public function facility()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('facility',$data);
+		$this->load->view('footer');
+	}
 
+	public function downloads()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_downloads();
+		$this->load->view('header',$data);
+		$this->load->view('downloads',$data);
+		$this->load->view('footer');
+	}
+
+	public function student_union()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_student_union();
+		$this->load->view('header',$data);
+		$this->load->view('student_union',$data);
+		$this->load->view('footer');
+	}
+	public function keycontact()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('keycontact',$data);
+		$this->load->view('footer');
+	}
+
+	public function nonteaching()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('nonteaching',$data);
+		$this->load->view('footer');
+	}
+
+	public function facultyadd()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('facultyadd',$data);
+		$this->load->view('footer');
+	}
 	public function sports()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
@@ -324,19 +371,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('sports',$data);
 		$this->load->view('footer');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public function contact()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
