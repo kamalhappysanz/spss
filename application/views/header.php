@@ -40,7 +40,6 @@
                         <li><a href="management.php">Management</a></li>
                         <li><a href="governing.php">Governing Council</a></li>
                         <li><a href="course.php">Courses Offered</a></li>
-
                         <li><a href="committee.php">Committees</a></li>
 
                     </ul>
@@ -200,12 +199,12 @@
                         <li>
                             <a href="#">Students Corner</a>
                             <ul class="dept1">
-                                <li><a href="scholarship.php">Scholarships</a></li>
-                                <li><a href="http://citspc.edu.in/uploads/Examination/DTM%20Certificate.pdf" target="_blank">How to apply for Transcripts Migration, Certificate, Duplicate Marksheet</a></li>
-                                <li><a href="extra.php">Extra- Curricular Activities </a></li>
-                                <li><a href="sports.php">Sports</a></li>
-                                <li><a href="extra.php">Gallery </a></li>
-                                <li><a href="alumini.php">Alumni </a></li>
+                                <li><a href="<?php echo base_url(); ?>scholarship">Scholarships</a></li>
+                                <li><a href="<?php echo base_url(); ?>assets/sps/docs/DTM Certificate.pdf" target="_blank">How to apply for Transcripts Migration, Certificate, Duplicate Marksheet</a></li>
+                                <li><a href="<?php echo base_url(); ?>extra">Extra- Curricular Activities </a></li>
+                                <li><a href="<?php echo base_url(); ?>sports">Sports</a></li>
+                                <li><a href="<?php echo base_url(); ?>extra">Gallery </a></li>
+                                <li><a href="<?php echo base_url(); ?>alumini.php">Alumni </a></li>
 
                             </ul>
 

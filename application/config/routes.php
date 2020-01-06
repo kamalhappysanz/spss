@@ -74,8 +74,6 @@ $route['iipcmission'] = 'welcome/iipcmission';
 $route['iipccommittee'] = 'welcome/iipccommittee';
 $route['iipcmou'] = 'welcome/iipcmou';
 $route['iipcedc'] = 'welcome/iipcedc';
-
-
 $route['committee'] = 'welcome/committee';
 $route['CIICP_home'] = 'welcome/CIICP_home';
 $route['CIICP_News'] = 'welcome/CIICP_News';
@@ -85,10 +83,14 @@ $route['CIICP_trust'] = 'welcome/CIICP_trust';
 $route['CIICP_spic'] = 'welcome/CIICP_spic';
 $route['CIICP_courses'] = 'welcome/CIICP_courses';
 $route['CIICP_photos'] = 'welcome/CIICP_photos';
-
-
-
 $route['placement'] = 'welcome/placement';
+$route['scholarship'] = 'welcome/scholarship';
+$route['extra'] = 'welcome/extra';
+$route['nss_activites'] = 'welcome/nss_activites';
+$route['sports'] = 'welcome/sports';
+
+
+
 
 
 

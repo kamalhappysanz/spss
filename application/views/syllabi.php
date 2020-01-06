@@ -6,7 +6,7 @@
 
                 <div class="col-md-12">
 
-                    <h6><a href="index.php">Home</a></h6>
+                    <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
 
                     <h6><span class="page-active">Syllabi</span></h6>
 
@@ -32,7 +32,7 @@
                                <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
                                <li><a href="<?php echo base_url(); ?>academic_calendar">Academic Calendar</a></li>
                                <li><a href="<?php echo base_url(); ?>library">Library</a></li>
-                               <li><a href="keycontact.php">Key Contacts </a></li>
+                               <li><a href="<?php echo base_url(); ?>keycontact">Key Contacts </a></li>
                                <li><a href="http://www.gmail.com">Webmail</a></li>
 
 

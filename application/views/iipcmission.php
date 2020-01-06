@@ -7,7 +7,7 @@
 
                 <div class="col-md-12">
 
-                    <h6><a href="index.php">Home</a></h6>
+                    <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
 
                     <h6><span class="page-active">IIPC Objective</span></h6>
 
@@ -83,7 +83,7 @@
                  <p> <h5> * Implementing emerging technologies mutually between the Industries and Institute.</h5></p><br>
                  <p> <h5> * To puzzle out the technical problems in the Industry with the expertise of Faculty.</h5></p><br>
                  <p> <h5> * MoU between Institute and Industry to contribute technologically for the society.</h5></p><br>
-                  
+
                                </div>
 
                        </div> <!-- /.grid-event-item -->

@@ -6,7 +6,7 @@
 
                 <div class="col-md-12">
 
-                    <h6><a href="index.php">Home</a></h6>
+                    <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
 
                     <h6><span class="page-active">Photos</span></h6>
 

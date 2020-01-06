@@ -291,6 +291,41 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function scholarship()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('scholarship',$data);
+		$this->load->view('footer');
+	}
+
+	public function extra()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_extra_curicullar_activity();
+		$this->load->view('header',$data);
+		$this->load->view('extra',$data);
+		$this->load->view('footer');
+	}
+
+	public function nss_activites()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('nss_activites',$data);
+		$this->load->view('footer');
+	}
+
+	public function sports()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_data']=$this->welcomemodel->get_sports();
+		$this->load->view('header',$data);
+		$this->load->view('sports',$data);
+		$this->load->view('footer');
+	}
+
+
 
 
 

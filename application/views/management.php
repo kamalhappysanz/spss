@@ -17,13 +17,15 @@
   <div class="widget-main">
                     <div class="widget-main-title">
 
-							<li><a href="instituteprofile.php">Institute Profile</a></li>
-							<li><a href="mission.php">Mission & Vision</a></li>
-							<li><a href="founders.php">Founders</a></li>
-							<li><a href="management.php">Management</a></li>
-							<li><a href="governing.php">Governing Council</a></li>
-							<li><a href="course.php">Courses Offered</a></li>
-							<li><a href="committee.php">Committees</a></li>
+                      <ul>
+              <li><a href="<?php echo base_url(); ?>ins_profile">Institute Profile</a></li>
+              <li><a href="<?php echo base_url(); ?>mission">Mission & Vision</a></li>
+              <li><a href="<?php echo base_url(); ?>founders">Founders</a></li>
+              <li><a href="<?php echo base_url(); ?>management">Management</a></li>
+              <li><a href="<?php echo base_url(); ?>governing">Governing Council</a></li>
+              <li><a href="<?php echo base_url(); ?>course_offered">Courses Offered</a></li>
+              <li><a href="<?php echo base_url(); ?>committee">Committees</a></li>
+                </ul>
 
                     </div>
                     <!-- /.widget-inner -->

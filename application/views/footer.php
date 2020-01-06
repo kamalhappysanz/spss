@@ -64,7 +64,7 @@
                   </div> <!-- /.col-md-5 -->
                   <div class="col-md-7">
                       <ul class="footer-nav">
-                          <li><a href="index.php">Home</a></li>
+                          <li><a href="<?php echo base_url(); ?>">Home</a></li>
                           <li><a href="course.php">Courses</a></li>
                           <li><a href="events.php">Events</a></li>
 

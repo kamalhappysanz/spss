@@ -2,7 +2,7 @@
         <div class="page-title clearfix">
             <div class="row">
                 <div class="col-md-12">
-                    <h6><a href="index.php">Home</a></h6>
+                    <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
                     <h6><span class="page-active">Transport</span></h6>
                 </div>
             </div>
@@ -15,7 +15,7 @@
   <div class="widget-main">
                     <div class="widget-main-title">
 
-							<li><a href="hostel.php">Hostel</a></li>
+							<li><a href="<?php echo base_url(); ?>hostel">Hostel</a></li>
 							<li><a href="#">General Facilities</a></li>
 
 
