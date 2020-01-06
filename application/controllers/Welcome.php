@@ -284,6 +284,8 @@ class Welcome extends CI_Controller {
 	public function placement()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_placement_data']=$this->welcomemodel->get_placement_record();
+		$data['res_placement_activity']=$this->welcomemodel->get_placement_activity();
 		$this->load->view('header',$data);
 		$this->load->view('placement',$data);
 		$this->load->view('footer');

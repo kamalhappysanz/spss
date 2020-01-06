@@ -214,12 +214,12 @@
 
                                 <ul class="dept1">
 
-                                    <li><a href="<?php echo base_url(); ?>placement">Placement Cell</a></li>
-                                    <li><a href="placementrec.php">Placement Records</a></li>
-                                    <li><a href="placementact.php">Placement Activities</a></li>
-                                    <li><a href="placementcomp.php">Companies Visited</a></li>
-                                    <li><a href="placementemi.php">Eminent Recruiters</a></li>
-                                    <li><a href="placementoffi.php">Placement Officers</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement" data-toggle="tab">Placement Cell</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement#section-3" data-toggle="tab">Placement Records</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement#section-2" data-toggle="tab">Placement Activities</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement#section-4" data-toggle="tab">Companies Visited</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement#section-5" data-toggle="tab">Eminent Recruiters</a></li>
+                                    <li><a href="<?php echo base_url(); ?>placement#section-6" data-toggle="tab">Placement Officers</a></li>
 
                                 </ul>
 
