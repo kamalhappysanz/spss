@@ -348,6 +348,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function events()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('events',$data);
+		$this->load->view('footer');
+	}
+
 	public function nonteaching()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
@@ -356,6 +364,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function faculty()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_dept_staff']=$this->welcomemodel->get_all_dept_staff_details();
+		$this->load->view('header',$data);
+		$this->load->view('faculty',$data);
+		$this->load->view('footer');
+	}
 	public function facultyadd()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();

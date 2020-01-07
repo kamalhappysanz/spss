@@ -14,16 +14,13 @@
  <div class="col-md-3">
   <div class="widget-main">
                     <div class="widget-main-title">
-
-							<li><a href="admission.php">Admission</a></li>
-							<li><a href="dept.php">Departments</a></li>
-							<li><a href="syllabi.php">Syllabi</a></li>
-							<li><a href="academic.php">Academic calendar</a></li>
-							<li><a href="library.php">Library</a></li>
-
-
-
-
+                      <ul>
+                        <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
+          							<li><a href="<?php echo base_url(); ?>dept">Departments</a></li>
+          							<li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
+          							<li><a href="<?php echo base_url(); ?>academic">Academic calendar</a></li>
+          							<li><a href="<?php echo base_url(); ?>library">Library</a></li>
+                      </ul>
                     </div>
                     <!-- /.widget-inner -->
                 </div>

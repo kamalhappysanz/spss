@@ -29,9 +29,8 @@
 
 
 <ul>
-                           <li><a href="hostel.php">Hostel</a></li>
-							              <li><a href="generalfacilities.php">General Facilities</a></li>
-
+  <li><a href="<?php echo base_url(); ?>hostel">Hostel</a></li>
+  <li><a href="<?php echo base_url(); ?>general_facility">General Facilities</a></li>
 
 
                </ul>

@@ -26,26 +26,13 @@
  <div class="widget-main">
 
                    <div class="widget-main-title">
-
-
-<ul>
-                               <li><a href="iipchome.php">Home</a></li>
-                               <li><a href="iipccommittee.php">IIPC Committee</a></li>
-                               <li><a href="iipcmission.php">Objective</a></li>
-                               <li><a href="iipcmou.php">MOUs</a></li>
-                               <li><a href="iipcedc.php">EDC</a></li>
-
-
-
-
-
-
-               </ul>
-
-
-
-
-
+                     <ul>
+                      <li><a href="<?php echo base_url(); ?>iipchome">Home</a></li>
+                      <li><a href="<?php echo base_url(); ?>iipccommittee">IIPC Committee</a></li>
+                      <li><a href="<?php echo base_url(); ?>iipcmission">Objective</a></li>
+                      <li><a href="<?php echo base_url(); ?>iipcmou">MOUs</a></li>
+                      <li><a href="<?php echo base_url(); ?>iipcedc">EDC</a></li>
+                     </ul>
                    </div>
 
                    <!-- /.widget-inner -->

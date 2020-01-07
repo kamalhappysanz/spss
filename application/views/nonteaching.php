@@ -15,7 +15,7 @@ th{
        <div class="page-title clearfix">
            <div class="row">
                <div class="col-md-12">
-                   <h6><a href="index.php">Home</a></h6>
+                   <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
                    <h6><span class="page-active">Non Teaching Staff</span></h6>
                </div>
            </div>

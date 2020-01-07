@@ -116,5 +116,12 @@ Class Welcomemodel extends CI_Model
        }
 
 
+       function get_all_dept_staff_details(){
+         $query=$this->db->select('dept_faculty.faculty_name,dept_faculty.dept_id,dept_faculty.faculty_email,dept_faculty.desgination,dept_faculty.degree,dept_faculty.file_upload,tbl_departments.dept_name')->from('dept_faculty')->join('tbl_departments','tbl_departments.id = dept_faculty.dept_id','LEFT')->where('dept_faculty.status','Active')->order_by('dept_faculty.faculty_position', 'ASC')->get();
+         // $query = $this->db->where(['status'=>'Active','id'=>$id])->order_by('dept_position', 'ASC')->get('tbl_departments');
+         return $query->result();
+       }
+
+
 }
 ?>

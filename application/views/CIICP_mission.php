@@ -25,31 +25,18 @@
 
  <div class="widget-main">
 
-                   <div class="widget-main-title">
-
-
-<ul>
-                           <li><a href="CIICP_home.php">Home</a></li>
-                           <li><a href="CIICP_News.php">Latest News</a></li>
-                               <li><a href="CIICP_mission.php">Mission</a></li>
-                               <li><a href="CIICP_mandate.php">Mandate</a></li>
-                               <li><a href="CIICP_trust.php">Thrust</a></li>
-                               <li><a href="CIICP_spic.php">SPIC </a></li>
-                               <li><a href="CIICP_courses.php">Courses Offered</a></li>
-                               <li><a href="CIICP_photos.php">Photos</a></li>
-
-
-
-               </ul>
-
-
-
-
-
-                   </div>
-
-                   <!-- /.widget-inner -->
-
+   <div class="widget-main-title">
+      <ul>
+        <li><a href="<?php echo base_url(); ?>CIICP_home">Home</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_News">Latest News</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_mission">Mission</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_mandate">Mandate</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_trust">Thrust</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_spic">SPIC </a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_courses">Courses Offered</a></li>
+        <li><a href="<?php echo base_url(); ?>CIICP_photos">Photos</a></li>
+      </ul>
+   </div>
                </div>
 
 

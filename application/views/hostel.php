@@ -15,8 +15,8 @@
   <div class="widget-main">
                     <div class="widget-main-title">
 
-							<li><a href="hostel.php">Hostel</a></li>
-							<li><a href="#">General Facilities</a></li>
+							<li><a href="<?php echo base_url(); ?>hostel">Hostel</a></li>
+							<li><a href="<?php echo base_url(); ?>general_facility">General Facilities</a></li>
 
 
                 </ul>

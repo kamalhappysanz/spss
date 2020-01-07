@@ -93,32 +93,10 @@ $route['downloads'] = 'welcome/downloads';
 $route['student_union'] = 'welcome/student_union';
 $route['keycontact'] = 'welcome/keycontact';
 $route['nonteaching'] = 'welcome/nonteaching';
-
+$route['faculty'] = 'welcome/faculty';
 $route['facultyadd'] = 'welcome/facultyadd';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$route['events']='welcome/events';
 $route['contact'] = 'welcome/contact';
-
-
-
-
-$route['privacy'] = 'welcome/privacy';
-$route['refund'] = 'welcome/refund';
 
 
 

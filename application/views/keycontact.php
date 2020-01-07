@@ -16,7 +16,7 @@ th{
         <div class="page-title clearfix">
             <div class="row">
                 <div class="col-md-12">
-                    <h6><a href="index.php">Home</a></h6>
+                    <h6><a href="<?php echo base_url(); ?>">Home</a></h6>
                     <h6><span class="page-active">Key Contacts</span></h6>
                 </div>
             </div>
@@ -28,15 +28,14 @@ th{
  <div class="col-md-3">
   <div class="widget-main">
                     <div class="widget-main-title">
+                      <ul>
+                              <li><a href="<?php echo base_url(); ?>faculty">Faculty</a></li>
+                              <li style="width:200px;"><a href="<?php echo base_url(); ?>facultyadd">Faculty with Additional Charges</a></li>
+                              <li><a class="nav-active" href="<?php echo base_url(); ?>nonteaching">Non-Teaching Staff</a></li>
+                              <li><a href="<?php echo base_url(); ?>keycontact">Key Contacts</a></li>
+                              <li><a href="https://web.archive.org/web/20170825163026/http://citspc.edu.in:2095/">Webmail</a></li>
 
-						<ul>
-                    <li><a href="faculty.php">Faculty</a></li>
-                    <li style="width:200px;"><a href="facultyadd.php">Faculty with Additional Charges</a></li>
-                    <li><a class="nav-active" href="nonteaching.php">Non-Teaching Staff</a></li>
-                    <li><a href="keycontact.php">Key Contacts</a></li>
-                    <li><a href="https://web.archive.org/web/20170624051644/http://citspc.edu.in:2095/">Webmail</a></li>
-
-                </ul>
+                          </ul>
 
 
                     </div>

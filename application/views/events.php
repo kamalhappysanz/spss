@@ -1,4 +1,3 @@
-
 <div class="container">
         <div class="page-title clearfix">
             <div class="row">
@@ -25,8 +24,6 @@
               <li><a href="<?php echo base_url(); ?>course_offered">Courses Offered</a></li>
               <li><a href="<?php echo base_url(); ?>committee">Committees</a></li>
                 </ul>
-
-                
 
 
                     </div>

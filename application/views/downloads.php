@@ -14,18 +14,15 @@
  <div class="col-md-3">
   <div class="widget-main">
                     <div class="widget-main-title">
-
-						<ul>
-										<li><a href="scholarship.php">Scholarships</a></li>
-                    					<li><a href="studentunion.php">Student Union</a></li>
-										<li><a href="examperformance.php">Exam Performance</a></li>
-
-							<li><a href="https://web.archive.org/web/20170705132603/http://intradote.tn.nic.in/">Attendance Particulars </a></li>
-							<li><a href="downloads.php">Downloads </a></li>
-							<li><a href="facility.php">Facilities </a></li>
-							<li><a href="extra.php">Extra- Curricular Activities </a></li>
-
-                </ul>
+                      <ul>
+                         <li><a href="<?php echo base_url(); ?>scholarship">Scholarships</a></li>
+                         <li><a href="<?php echo base_url(); ?>studentunion">Student Union</a></li>
+                         <li><a href="<?php echo base_url(); ?>examperformance">Exam Performance</a></li>
+                         <li><a href="https://web.archive.org/web/20170916094029/http://intradote.tn.nic.in/">Attendance Particulars </a></li>
+                         <li><a href="<?php echo base_url(); ?>downloads">Downloads </a></li>
+                         <li><a href="<?php echo base_url(); ?>facility">Facilities </a></li>
+                         <li><a href="<?php echo base_url(); ?>extra">Extra- Curricular Activities </a></li>
+                     </ul>	
 
 
                     </div>

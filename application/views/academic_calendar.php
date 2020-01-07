@@ -28,11 +28,11 @@
 
 
 <ul>
-                               <li><a href="syllabi.php">Syllabi</a></li>
-                               <li><a href="admission.php">Admission</a></li>
-                               <li><a href="academic.php">Academic Calendar</a></li>
-                               <li><a href="library.php">Library</a></li>
-                               <li><a href="keycontact.php">Key Contacts </a></li>
+                               <li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
+                               <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
+                               <li><a href="<?php echo base_url(); ?>academic">Academic Calendar</a></li>
+                               <li><a href="<?php echo base_url(); ?>library">Library</a></li>
+                               <li><a href="<?php echo base_url(); ?>keycontact">Key Contacts </a></li>
                                <li><a href="http://www.gmail.com">Webmail</a></li>
 
 

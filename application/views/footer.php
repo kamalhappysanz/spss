@@ -17,10 +17,10 @@
                   <div class="footer-widget">
                       <h4 class="footer-widget-title">College</h4>
                       <ul class="list-links">
-                          <li><a href="instituteprofile.php">Institute Profile</a></li>
-                          <li><a href="admission.php">Admission Details</a></li>
-                          <li><a href="course.php">Course Details</a></li>
-                          <li><a href="syllabi.php">Syllabi</a></li>
+                          <li><a href="<?php echo base_url(); ?>ins_profile">Institute Profile</a></li>
+                          <li><a href="<?php echo base_url(); ?>admission">Admission Details</a></li>
+                          <li><a href="<?php echo base_url(); ?>course">Course Details</a></li>
+                          <li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
                       </ul>
                   </div>
               </div>
@@ -28,11 +28,11 @@
                   <div class="footer-widget">
                       <h4 class="footer-widget-title">Resources For</h4>
                       <ul class="list-links">
-                          <li><a href="dept.php" target="_blank">Staff Profile</a></li>
+                          <li><a href="<?php echo base_url(); ?>dept" target="_blank">Staff Profile</a></li>
                           <li><a href="https://web.archive.org/web/20170916125220/http://intradote.tn.nic.in/" target="_blank">Attendance Particulars</a></li>
 
-                          <li><a href="scholarship.php">Scholarship Details</a></li>
-                          <li><a href="examperformance.php">Exam Performance</a></li>
+                          <li><a href="<?php echo base_url(); ?>scholarship">Scholarship Details</a></li>
+                          <li><a href="<?php echo base_url(); ?>examperformance">Exam Performance</a></li>
 
                       </ul>
                   </div>
@@ -43,9 +43,9 @@
                       <ul class="list-links">
 
                           <li><a href="http://online.fliphtml5.com/lzxx/nbpy/" target="_blank">Handbook</a></li>
-                          <li><a href="placement.php">Placement Details</a></li>
-                          <li><a href="library.php">Library</a></li>
-                          <li><a href="facility.php">Other Facilities</a></li>
+                          <li><a href="<?php echo base_url(); ?>placement">Placement Details</a></li>
+                          <li><a href="<?php echo base_url(); ?>library">Library</a></li>
+                          <li><a href="<?php echo base_url(); ?>facility">Other Facilities</a></li>
 
                       </ul>
                   </div>
@@ -65,11 +65,11 @@
                   <div class="col-md-7">
                       <ul class="footer-nav">
                           <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                          <li><a href="course.php">Courses</a></li>
-                          <li><a href="events.php">Events</a></li>
+                          <li><a href="<?php echo base_url(); ?>course">Courses</a></li>
+                          <li><a href="<?php echo base_url(); ?>events">Events</a></li>
 
 
-                          <li><a href="contact.php">Contact</a></li>
+                          <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
                       </ul>
                   </div> <!-- /.col-md-7 -->
               </div> <!-- /.row -->

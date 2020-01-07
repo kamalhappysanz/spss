@@ -5,7 +5,12 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/sps/css/banner-styles.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/sps/css/iconochive.css" />
     <title>CIT Sandwich Polytechnic College</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="viewport" content="width=1024"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+
     <meta name="description" content="CIT Sandwich Polytechnic College">
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url(); ?>assets/sps/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -29,18 +34,18 @@
         </a>
         <div class="responsive_menu">
             <ul class="main_menu">
-                <li class="active"><a href="index.php">Home</a></li>
+                <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
 
                 <li>
                     <a href="#">About Us</a>
                     <ul class="sub-menu">
-                        <li><a href="instituteprofile.php">Institute Profile</a></li>
-                        <li><a href="mission.php">Mission</a></li>
-                        <li><a href="founders.php">Founders</a></li>
-                        <li><a href="management.php">Management</a></li>
-                        <li><a href="governing.php">Governing Council</a></li>
-                        <li><a href="course.php">Courses Offered</a></li>
-                        <li><a href="committee.php">Committees</a></li>
+                        <li><a href="<?php echo base_url(); ?>ins_profile">Institute Profile</a></li>
+                        <li><a href="<?php echo base_url(); ?>mission">Mission</a></li>
+                        <li><a href="<?php echo base_url(); ?>founders">Founders</a></li>
+                        <li><a href="<?php echo base_url(); ?>management">Management</a></li>
+                        <li><a href="<?php echo base_url(); ?>governing">Governing Council</a></li>
+                        <li><a href="<?php echo base_url(); ?>course_offered">Courses Offered</a></li>
+                        <li><a href="<?php echo base_url(); ?>committee">Committees</a></li>
 
                     </ul>
 
@@ -50,9 +55,9 @@
                     <a href="#">Academics</a>
                     <ul>
 
-                        <li><a href="admission.php">Admission</a></li>
+                        <li><a href="<?php echo base_url(); ?>admission">Admission</a></li>
                         <li class="submenu">
-                            <a href="dept.php">Departments</a>
+                            <a href="dept">Departments</a>
                             <ul>
                                 <?php if(!empty($res_dept)){
                                   foreach($res_dept as $rows_dept){ ?>
@@ -63,10 +68,10 @@
                             </ul>
 
                         </li>
-                        <li><a href="syllabi.php">Syllabi</a></li>
-                        <!-- syllabi.php -->
-                        <li><a href="academic.php">Academic Calendar</a></li>
-                        <li><a href="library.php">Library</a></li>
+                        <li><a href="<?php echo base_url(); ?>syllabi">Syllabi</a></li>
+                        <!-- syllabi -->
+                        <li><a href="<?php echo base_url(); ?>academic_calendar">Academic Calendar</a></li>
+                        <li><a href="<?php echo base_url(); ?>library">Library</a></li>
 
                     </ul>
 
@@ -74,38 +79,38 @@
                 <li>
                     <a href="#">Staff</a>
                     <ul>
-                        <li><a href="faculty.php">Faculty</a></li>
-                        <li><a href="facultyadd.php">Faculty With Additional Charges</a></li>
-                        <li><a href="nonteaching.php">Non-Teaching Staff</a></li>
-                        <li><a href="keycontact.php">Key Contacts</a></li>
+                        <li><a href="<?php echo base_url(); ?>faculty">Faculty</a></li>
+                        <li><a href="<?php echo base_url(); ?>facultyadd">Faculty With Additional Charges</a></li>
+                        <li><a href="<?php echo base_url(); ?>nonteaching">Non-Teaching Staff</a></li>
+                        <li><a href="<?php echo base_url(); ?>keycontact">Key Contacts</a></li>
                         <li><a href="https://gmail.com" target="_blank">Webmail</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Student</a>
                     <ul>
-                        <li><a href="scholarship.php">Scholarships</a></li>
-                        <li><a href="studentunion.php">Student Union</a></li>
-                        <li><a href="facility.php">Facilities </a></li>
-                        <li><a href="extra.php">Extra- Curricular Activities </a></li>
-                        <li><a href="extra.php">Gallery </a></li>
+                        <li><a href="<?php echo base_url(); ?>scholarship">Scholarships</a></li>
+                        <li><a href="<?php echo base_url(); ?>studentunion">Student Union</a></li>
+                        <li><a href="<?php echo base_url(); ?>facility">Facilities </a></li>
+                        <li><a href="<?php echo base_url(); ?>extra">Extra- Curricular Activities </a></li>
+                        <li><a href="<?php echo base_url(); ?>extra">Gallery </a></li>
 
                     </ul>
 
                     <li>
                         <a href="#">CIICP</a>
                         <ul>
-                            <li><a href="CIICP_home.php">Home</a></li>
-                            <li><a href="CIICP_mission.php">Mission</a></li>
-                            <li><a href="CIICP_mandate.php">Mandate</a></li>
-                            <li><a href="CIICP_trust.php">Thrust</a></li>
-                            <li><a href="CIICP_spic.php">SPIC </a></li>
-                            <li><a href="CIICP_courses.php">Courses Offered</a></li>
-                            <li><a href="CIICP_photos.php">Photos</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_home">Home</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_mission">Mission</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_mandate">Mandate</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_trust">Thrust</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_spic">SPIC </a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_courses">Courses Offered</a></li>
+                            <li><a href="<?php echo base_url(); ?>CIICP_photos">Photos</a></li>
                         </ul>
 
                     </li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
             </ul>
             <!-- /.main_menu -->
             <!-- /.social_icons -->
@@ -120,7 +125,7 @@
 
                 <div class="col-md-2">
                     <div class="logo" style="text-align:left; margin: 1px 140px">
-                        <a href="index.php" title="CIT-Sandwich" rel="home">
+                        <a href="<?php echo base_url(); ?>" title="CIT-Sandwich" rel="home">
                             <img src="<?php echo base_url(); ?>assets/sps/images/LOGO.png" alt="CIT-Sandwich" style="padding-bottom: 10px;height: 180px;">
                             <br>
                         </a>
@@ -130,7 +135,7 @@
                 <!-- /.col-md-4 -->
                 <div class="col-md-8">
                     <div class="logo" style="text-align:center; margin: 0px; padding-left: 130px; padding-top: 30px; margin-left: -67px">
-                        <a href="index.php" title="CIT-Sandwich" rel="home">
+                        <a href="<?php echo base_url(); ?>" title="CIT-Sandwich" rel="home">
                             <span style="font-size: 27px;">CIT SANDWICH POLYTECHNIC COLLEGE<p style="font-size: 18px;">Year Established : 1961</p><p style="font-size: 18px;">Government Aided Institution Approved by AICTE, New Delhi.</p></span>
                         </a>
                     </div>
@@ -141,7 +146,7 @@
                 <div class="col-md-4 header-right" style="display:none">
                     <ul class="small-links">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>contact">Contact</a></li>
 
                     </ul>
 
@@ -155,7 +160,7 @@
             <div class="container">
                 <nav class="main-navigation clearfix visible-md visible-lg" role="navigation">
                     <ul class="main-menu sf-menu">
-                        <li class="active"><a href="index.php">Home</a></li>
+                        <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
 
                         <li>
                             <a href="#">About Us</a>
@@ -204,7 +209,7 @@
                                 <li><a href="<?php echo base_url(); ?>extra">Extra- Curricular Activities </a></li>
                                 <li><a href="<?php echo base_url(); ?>sports">Sports</a></li>
                                 <li><a href="<?php echo base_url(); ?>extra">Gallery </a></li>
-                                <li><a href="<?php echo base_url(); ?>alumini.php">Alumni </a></li>
+                                <li><a href="<?php echo base_url(); ?>alumini">Alumni </a></li>
 
                             </ul>
 
