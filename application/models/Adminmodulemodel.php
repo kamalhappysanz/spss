@@ -145,5 +145,60 @@ Class Adminmodulemodel extends CI_Model
         }
 
 
+    function create_latest_events($title,$event_date,$status,$filename,$user_id){
+      $get_postion="SELECT * FROM tbl_latest_events order by id desc limit 1";
+      $result_postion=$this->db->query($get_postion);
+      foreach($result_postion->result() as $rows_position){}
+      $postion=$rows_position->file_position+1;
+
+      $insert="INSERT INTO tbl_latest_events (title,file_upload,event_date,file_position,status,updated_at,updated_by) VALUES('$title','$filename','$event_date','$postion','$status',NOW(),'$user_id')";
+      $result=$this->db->query($insert);
+      if($result){
+          $data = array("status" => "success");
+            return $data;
+      }else{
+        $data = array("status" => "failed");
+          return $data;
+      }
+    }
+
+
+    function view_latest_events(){
+      $select="SELECT * FROM tbl_latest_events ORDER BY file_position asc";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function change_latest_event_position($data = array()){
+      $i=1;
+            foreach ($data as $key => $value) {
+                    $sql = "UPDATE tbl_latest_events SET file_position='$i' WHERE id='$value'";
+                    $query = $this->db->query($sql);
+            $i++;
+            }
+    }
+
+
+    function get_latest_event_edit($id){
+      $dt_id=base64_decode($id)/98765;
+      $select="SELECT * FROM tbl_latest_events WHERE id='$dt_id'";
+      $result=$this->db->query($select);
+      return $result->result();
+    }
+
+
+    function update_latest_events($id,$title,$event_date,$status,$filename,$user_id){
+      $update="UPDATE tbl_latest_events SET title='$title',file_upload='$filename',event_date='$event_date',status='$status',updated_at=NOW(),updated_by='$user_id' WHERE id='$id'";
+      $result=$this->db->query($update);
+        if($result){
+            $data = array("status" => "success");
+              return $data;
+        }else{
+          $data = array("status" => "failed");
+            return $data;
+        }
+    }
+
 }
 ?>

@@ -97,13 +97,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="alert alert-info" style="text-align:center;">
-                                <a href="http://citspc.edu.in/uploads/Committees/Committee%20for%20Harassment%20of%20Women%20in%20Work%20Place.pdf"><strong>Sexual Harrassment Committee</strong> </a>
+                                <a href="<?php echo base_url(); ?>assets/sps/docs/Committee for Harassment of Women in Work Place.pdf"><strong>Sexual Harrassment Committee</strong> </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="alert alert-success" style="text-align:center;">
                                 <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;">
-                                <a href="http://citspc.edu.in/uploads/FINAL NEWSLETTER 19-20.pdf"> <strong> NEWSLETTER - ODD SEMESTER <br> (2019 - 2020) </strong></a>
+                                <a href="<?php echo base_url(); ?>assets/sps/docs/FINAL NEWSLETTER 19-20.pdf"> <strong> NEWSLETTER - ODD SEMESTER <br> (2019 - 2020) </strong></a>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -129,50 +129,34 @@
                         <div class="widget-inner">
 
                             <div class="row">
+                              <?php  if(empty($res_event)){
 
-                                <div class="col-md-4">
-                                    <div class="event-small-list clearfix">
-                                        <div class="calendar-small">
-                                            <span class="s-month">AUG</span>
-                                            <span class="s-date">28-2019</span>
-                                        </div>
-                                        <div class="event-small-details">
-                                            <h5 class="event-small-title"><a href="http://citspc.edu.in/uploads/MOU Sai.pdf">MOU-M/s.SAI Incubation Centre, Coimbatore</a></h5>
+                              }else{
+                                foreach($res_event as $row_event){
 
-                                        </div>
-                                    </div>
-                                </div>
+                                    ?>
+                                  <div class="col-md-4">
+                                      <div class="event-small-list clearfix">
+                                          <div class="calendar-small">
+                                              <span class="s-month"><?php echo date('M', strtotime($row_event->event_date)); ?></span>
+                                              <span class="s-date"><?php echo date('d-y', strtotime($row_event->event_date)); ?></span>
+                                          </div>
+                                          <div class="event-small-details">
+                                              <h5 class="event-small-title"><a target="_blank" href="<?php echo base_url(); ?>assets/documents/<?php echo $row_event->file_upload; ?>"><?php echo $row_event->title; ?></a></h5>
 
-                                <div class="col-md-4">
-                                    <div class="event-small-list clearfix">
-                                        <div class="calendar-small">
-                                            <span class="s-month">JUN</span>
-                                            <span class="s-date">19-2019</span>
-                                        </div>
-                                        <div class="event-small-details">
-                                            <h5 class="event-small-title"><a href="http://citspc.edu.in/uploads/FIRST YEAR CITSPC.pdf">FIRST YEAR ORIENTATION PROGRAM</a></h5>
+                                          </div>
+                                      </div>
+                                  </div>
+                              <?php  }
+                              } ?>
 
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-4">
-                                    <div class="event-small-list clearfix">
-                                        <div class="calendar-small">
-                                            <span class="s-month">JUN</span>
-                                            <span class="s-date">10-2019</span>
-                                        </div>
-                                        <div class="event-small-details">
-                                            <h5 class="event-small-title"><a href="http://citspc.edu.in/uploads/MOU Venkateswara.pdf">MOU-M/s.Shri Venkateswara Hi-Tech Machineries Pvt. Ltd., Coimbatore</a></h5>
 
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
 
                             <div class="event-small-details">
-                                <div class="view-details pull-right"><a href="current-events.php" class="lightBtn">Next >></a></div>
+                                <div class="view-details pull-right"><a href="<?php echo base_url(); ?>current_events" class="lightBtn">Next >></a></div>
                             </div>
 
                         </div>

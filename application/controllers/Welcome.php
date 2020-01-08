@@ -19,6 +19,7 @@ class Welcome extends CI_Controller {
 		$data['res_banner']=$this->welcomemodel->get_home_banner();
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$data['res_announcement']=$this->welcomemodel->get_announcements();
+		$data['res_event']=$this->welcomemodel->get_latest_events();
 		$this->load->view('header',$data);
 		$this->load->view('home',$data);
 		$this->load->view('footer');
@@ -353,6 +354,14 @@ class Welcome extends CI_Controller {
 		$data['res_dept']=$this->welcomemodel->get_dept_name();
 		$this->load->view('header',$data);
 		$this->load->view('events',$data);
+		$this->load->view('footer');
+	}
+	public function current_events()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$data['res_event']=$this->welcomemodel->get_all_latest_events();
+		$this->load->view('header',$data);
+		$this->load->view('current_events',$data);
 		$this->load->view('footer');
 	}
 

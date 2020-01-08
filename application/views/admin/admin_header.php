@@ -69,6 +69,7 @@ th{
                 <ul class="submenu-item">
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url();  ?>masters/banner_list">Home page sliders</a></li>
                   <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>admindept/governing">Governing Council </a></li>
+                  <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminmodule/latest_events">Latest Events</a></li>
 <!-- <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>adminexam/autonomousadd">Autonomous Exam </a></li> -->
 
                 </ul>

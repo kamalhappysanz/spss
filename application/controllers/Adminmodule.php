@@ -320,4 +320,119 @@ class Adminmodule extends CI_Controller {
 
 
 
+		public function latest_events(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+			if($user_type=='1'){
+				$data['res']=$this->adminmodulemodel->view_latest_events();
+			 $this->load->view('admin/admin_header');
+			 $this->load->view('admin/events/create_events',$data);
+			 $this->load->view('admin/admin_footer');
+			}else{
+				 redirect('/login');
+			}
+		}
+
+
+
+		public function create_latest_events(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+			if($user_type=='1'){
+				$title=$this->db->escape_str($this->input->post('title'));
+				$event_date=$this->db->escape_str($this->input->post('event_date'));
+				$status=$this->db->escape_str($this->input->post('status'));
+				$profilepic = $_FILES['file_upload']['name'];
+				if(empty($profilepic)){
+				$filename=' ';
+			}else{
+				$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+				$filename = round(microtime(true)) . '.' . $temp;
+				$uploaddir = 'assets/documents/';
+				$profilepic = $uploaddir.$filename;
+				move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+			}
+			$data['res']=$this->adminmodulemodel->create_latest_events($title,$event_date,$status,$filename,$user_id);
+			if($data['res']['status']=="success"){
+				$messge = array('message' => 'Successfully Updated','class' => 'alert alert-success fade in');
+				$this->session->set_flashdata('msg', $messge);
+				redirect('adminmodule/latest_events/#list' );
+			}else{
+				$messge = array('message' => 'Something Went Wrong','class' => 'alert alert-danger fade in');
+				$this->session->set_flashdata('msg', $messge);
+				redirect('adminmodule/latest_events/#list' );
+			}
+			}else{
+				 redirect('/login');
+			}
+		}
+
+
+		public function change_latest_event_position(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+		 if($user_type=='1'){
+			 $position = $this->input->post('position');
+			 $this->adminmodulemodel->change_latest_event_position($position);
+		 }else{
+
+		 }
+		}
+
+
+		public function get_latest_event_edit(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+			if($user_type=='1'){
+				$id=$this->uri->segment(3);
+				$data['res']=$this->adminmodulemodel->get_latest_event_edit($id);
+			 $this->load->view('admin/admin_header');
+			 $this->load->view('admin/events/update_events',$data);
+			 $this->load->view('admin/admin_footer');
+			}else{
+				 redirect('/login');
+			}
+		}
+
+		public function update_latest_events(){
+			$data=$this->session->userdata();
+			$user_id=$this->session->userdata('user_id');
+			$user_type=$this->session->userdata('user_role');
+			if($user_type=='1'){
+				$id=$this->db->escape_str($this->input->post('id'));
+				$title=$this->db->escape_str($this->input->post('title'));
+				$event_date=$this->db->escape_str($this->input->post('event_date'));
+				$old_image=$this->db->escape_str($this->input->post('old_file_upload'));
+				$status=$this->db->escape_str($this->input->post('status'));
+				$profilepic = $_FILES['file_upload']['name'];
+				if(empty($profilepic)){
+				$filename=$old_image;
+			}else{
+				$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+				$filename = round(microtime(true)) . '.' . $temp;
+				$uploaddir = 'assets/documents/';
+				$profilepic = $uploaddir.$filename;
+				move_uploaded_file($_FILES['file_upload']['tmp_name'], $profilepic);
+			}
+
+			$data['res']=$this->adminmodulemodel->update_latest_events($id,$title,$event_date,$status,$filename,$user_id);
+			if($data['res']['status']=="success"){
+				$messge = array('message' => 'Successfully Updated','class' => 'alert alert-success fade in');
+				$this->session->set_flashdata('msg', $messge);
+				redirect('adminmodule/latest_events/#list' );
+			}else{
+				$messge = array('message' => 'Something Went Wrong','class' => 'alert alert-danger fade in');
+				$this->session->set_flashdata('msg', $messge);
+				redirect('adminmodule/latest_events/#list' );
+			}
+			}else{
+				 redirect('/login');
+			}
+		}
+
+
 }

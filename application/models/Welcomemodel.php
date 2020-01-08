@@ -84,6 +84,15 @@ Class Welcomemodel extends CI_Model
           return $query->result();
        }
 
+       function get_latest_events(){
+          $query = $this->db->where(['status'=>'Active'])->order_by('file_position', 'ASC')->get('tbl_latest_events',3);
+          return $query->result();
+       }
+       function get_all_latest_events(){
+          $query = $this->db->where(['status'=>'Active'])->order_by('file_position', 'ASC')->get('tbl_latest_events');
+          return $query->result();
+       }
+
 
 
        function get_dept_faculty($dept_id){
