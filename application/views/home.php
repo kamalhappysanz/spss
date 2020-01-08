@@ -251,7 +251,7 @@
                                     <!-- /.prof-list-item -->
                                     <div class="prof-list-item clearfix">
                                         <div class="prof-thumb">
-                                            <img src="<?php echo base_url(); ?>assets/sps/images/founder4.JPG" alt="Profesor Name">
+                                            <img src="<?php echo base_url(); ?>assets/sps/images/founder4.jpg" alt="Profesor Name">
                                         </div>
                                         <!-- /.prof-thumb -->
                                         <div class="prof-details">
