@@ -12,7 +12,7 @@ Class Welcomemodel extends CI_Model
 
 
        function get_home_banner(){
-          $query = $this->db->where(['status'=>'Active'])->order_by('updated_at', 'DESC')->get('banners');
+          $query = $this->db->where(['status'=>'Active'])->order_by('file_position', 'ASC')->get('banners');
           return $query->result();
        }
 

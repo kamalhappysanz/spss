@@ -1,78 +1,5 @@
-
-<script type="text/javascript" src="https://web.archive.org/web/20170625153638js_/http://opoloo.github.io/jquery_upload_preview/assets/js/jquery.uploadPreview.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $.uploadPreview({
-    input_field: "#image-upload",
-    preview_box: "#image-preview",
-    label_field: "#image-label"
-  });
-});
-</script>
-<style>
-#image-preview {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-  background-color: #ffffff;
-  color: #ecf0f1;
-
-  margin-left:700px;
-  margin-top:-200px;
-  input {
-    line-height: 200px;
-    font-size: 200px;
-    position: absolute;
-    opacity: 0;
-    z-index: 10;
-  }
-  label {
-    position: absolute;
-    z-index: 5;
-    opacity: 0.8;
-    cursor: pointer;
-    background-color: #bdc3c7;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 50px;
-    text-transform: uppercase;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    text-align: center;
-  }
-}
-.inputTextarea {
-     width:300px !important;
-   height:50px !important;
-    border: 1px solid #cccccc;
-    padding: 7px;
-}
-.inputTextarea {
-    float: right;
-    margin-top: -16px;
-	    margin-bottom: 10px;
-}
-.inputText {
-    float: right;
-    margin-top: -20px;
-	    margin-bottom: 10px;
-}
-label {
-     margin: 0 0 0 0 !important;
-}
-.suc{
-    margin-left: 277px;
-    background-color: green;
-    color: white;
-    padding: 5px;
-    width: 128px;
-}
-</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
 
 <div class="container">
         <div class="page-title clearfix">
@@ -91,7 +18,7 @@ label {
         <div class="row">
 
            <!-- /.col-md-5 -->
-
+           <form action="" method="post" id="aluminiform" enctype="multipart/form-data">
             <div class="col-md-7">
                 <div class="contact-page-content">
                     <div class="contact-heading">
@@ -175,6 +102,44 @@ label {
                     </div>
                 </div>
             </div> <!-- /.col-md-7 -->
-
+          </form>
         </div> <!-- /.row -->
     </div>
+
+<script>
+$('#aluminiform').validate({
+    rules: {
+        internal_commission: {required: true,number:true,maxlength:2 },
+        external_commission: {required: true,number:true,maxlength:2 }
+    },
+    messages: {
+        internal_commission:{
+            required :"Enter the skilex Commission"
+        },
+        internal_commission:{
+            required :"Enter the Associate Commission"
+          },
+    },
+    submitHandler: function(form) {
+    $.ajax({
+               url: "<?php echo base_url(); ?>masters/update_commission_percentage",
+               type: 'POST',
+               data: $('#aluminiform').serialize(),
+               dataType: "json",
+               success: function(response) {
+                  var stats=response.status;
+                   if (stats=="success") {
+                     swal('Commission Updated successfully')
+                     window.setTimeout(function () {
+                      location.href = "<?php echo base_url();  ?>masters/tax_commission";
+                  }, 1000);
+
+                 }else{
+                    swal(stats);
+                     }
+               }
+           });
+         }
+
+    });
+</script>

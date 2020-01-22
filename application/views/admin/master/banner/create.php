@@ -58,18 +58,20 @@
           <tr>
               <th>S.no</th>
               <th>Title</th>
+              <th>Position</th>
               <th>Image</th>
               <th>Status</th>
               <?php if($role=='6'){}else{ ?><th>Actions</th><?php } ?>
           </tr>
       </thead>
-      <tbody>
+      <tbody class="row_position">
         <?php $i=1; foreach($res as $rows){ ?>
 
 
-          <tr>
+        <tr id="<?php echo $rows->id; ?>">
                 <td><?php echo $i; ?></td>
               <td><?php echo $rows->banner_title; ?>  </td>
+                <td><?php echo $rows->file_position; ?>  </td>
                 <td><img src="<?php echo base_url(); ?>assets/banners/<?php echo $rows->banner_img; ?>" style="width:150px;height:100px;">  </td>
                 <td><?php if($rows->status=='Inactive'){ ?>
                 <button type="button" class="badge badge-danger btn-fw">Inactive</button>
@@ -126,5 +128,23 @@
       }
       });
 
-
+      $( ".row_position" ).sortable({
+    stop: function() {
+    var selectedData = new Array();
+      $('.row_position>tr').each(function() {
+          selectedData.push($(this).attr("id"));
+      });
+      updateOrder(selectedData);
+    }
+    });
+    function updateOrder(data) {
+    $.ajax({
+        url:"<?php echo base_url(); ?>masters/change_banner_position",
+        type:'post',
+        data:{position:data},
+        success:function(result){
+          window.location.reload();
+         }
+    })
+    }
     </script>

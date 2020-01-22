@@ -388,6 +388,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('facultyadd',$data);
 		$this->load->view('footer');
 	}
+	public function alumini()
+	{
+		$data['res_dept']=$this->welcomemodel->get_dept_name();
+		$this->load->view('header',$data);
+		$this->load->view('alumini',$data);
+		$this->load->view('footer');
+	}
 	public function sports()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();

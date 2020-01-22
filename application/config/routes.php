@@ -97,6 +97,8 @@ $route['faculty'] = 'welcome/faculty';
 $route['facultyadd'] = 'welcome/facultyadd';
 $route['events']='welcome/events';
 $route['current_events']='welcome/current_events';
+$route['alumini'] = 'welcome/alumini';
+
 $route['contact'] = 'welcome/contact';
 
 
