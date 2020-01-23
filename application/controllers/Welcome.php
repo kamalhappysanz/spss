@@ -395,6 +395,41 @@ class Welcome extends CI_Controller {
 		$this->load->view('alumini',$data);
 		$this->load->view('footer');
 	}
+
+	public function save_alumini_data()
+	{
+		$coursename=$this->input->post('coursename');
+		$yearofpassing=$this->input->post('yearofpassing');
+		$fname=$this->input->post('fname');
+		$lname=$this->input->post('lname');
+		$email=$this->input->post('email');
+		$mobile=$this->input->post('mobile');
+		$dob=$this->input->post('dob');
+		$address=$this->input->post('address');
+		$gender=$this->input->post('gender');
+		$profilepic = $_FILES['profile']['name'];
+		if(empty($profilepic)){
+		$filename=' ';
+	}else{
+		$temp = pathinfo($profilepic, PATHINFO_EXTENSION);
+		$filename = round(microtime(true)) . '.' . $temp;
+		$uploaddir = 'assets/sps/alumini/';
+		$profilepic = $uploaddir.$filename;
+		move_uploaded_file($_FILES['profile']['tmp_name'], $profilepic);
+	}
+		$data=$this->welcomemodel->save_alumini_data($coursename,$yearofpassing,$fname,$lname,$email,$mobile,$dob,$address,$gender,$filename);
+		if($data['status']=='success'){
+			$this->session->set_flashdata('msg', 'Thank you for saving your details');
+			redirect('/alumini');
+		}else{
+			$this->session->set_flashdata('msg', 'Something went wrong Please contact Administration');
+			redirect('/alumini');
+		}
+
+
+	}
+
+
 	public function sports()
 	{
 		$data['res_dept']=$this->welcomemodel->get_dept_name();

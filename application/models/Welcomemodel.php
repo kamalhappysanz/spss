@@ -132,5 +132,19 @@ Class Welcomemodel extends CI_Model
        }
 
 
+       function save_alumini_data($coursename,$yearofpassing,$fname,$lname,$email,$mobile,$dob,$address,$gender,$filename){
+         $insert="INSERT INTO tbl_alumni(course,year_of_passing,first_name,last_name,mobile_no,dob,gender,email,address,file_upload,status,updated_at) VALUES('$coursename','$yearofpassing','$fname','$lname','$mobile','$dob','$gender','$email','$address','$filename','Active',NOW())";
+         $result=$this->db->query($insert);
+         if($result){
+             $data = array("status" => "success");
+               return $data;
+         }else{
+           $data = array("status" => "failed");
+             return $data;
+         }
+
+       }
+
+
 }
 ?>
