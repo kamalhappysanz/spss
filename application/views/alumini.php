@@ -35,6 +35,7 @@
          ?>
            <div class="alert alert-success">
              <?php  echo $this->session->flashdata('msg'); ?>
+           </div>
         <?php
       } ?></p>
                 <div class="contact-page-content">
