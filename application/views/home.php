@@ -192,7 +192,7 @@
                                     <!-- <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right:10px;margin-top: -3px;"> -->
                                     <?php if(empty($res_announcement)){}else{
                                       foreach($res_announcement as $row_announcement){   ?>
-                                            <a href="<?php echo base_url(); ?>assets/documents/<?php echo $row_announcement->file_upload; ?>" target="_blank"><?php echo $row_announcement->title; ?></a> <br>
+                                            <a href="<?php echo base_url(); ?>assets/documents/<?php echo $row_announcement->file_upload; ?>" target="_blank"><?php echo $row_announcement->title; ?></a> <br><br>
                                     <?php  }
                                     } ?>
 
