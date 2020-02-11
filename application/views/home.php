@@ -2,13 +2,17 @@
 
     <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0">
     <?php if(empty($res_announcement)){}else{
-      foreach($res_announcement as $row_announcement){  }  ?>
+      foreach($res_announcement as $row_announcement){
+        if ($row_announcement === reset($res_announcement))
+          
+
+
+        ?>
             <a href="<?php echo base_url(); ?>assets/documents/<?php echo $row_announcement->file_upload; ?>" target="_blank"><?php echo $row_announcement->title; ?></a> <br><br>
-    <?php
+    <?php }
     } ?>
 
 
-    <!-- <a href="http://citspc.edu.in/uploads/Placed_Students.pdf" target="_blank">2018-19 Batch Placement-107 students has placed as on 15-03-2019</a> -->
     <br>
     <br>
 
