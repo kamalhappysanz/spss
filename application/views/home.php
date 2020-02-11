@@ -1,7 +1,14 @@
 <marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5" style="height: 30px;">
 
-    <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0" style="float:right;margin-right: 1070px;margin-top: -3px;">
-    <a href="http://citspc.edu.in/uploads/Placed_Students.pdf" target="_blank">2018-19 Batch Placement-107 students has placed as on 15-03-2019</a>
+    <img src="<?php echo base_url(); ?>assets/sps/images/new.gif" border="0">
+    <?php if(empty($res_announcement)){}else{
+      foreach($res_announcement as $row_announcement){  }  ?>
+            <a href="<?php echo base_url(); ?>assets/documents/<?php echo $row_announcement->file_upload; ?>" target="_blank"><?php echo $row_announcement->title; ?></a> <br><br>
+    <?php
+    } ?>
+
+
+    <!-- <a href="http://citspc.edu.in/uploads/Placed_Students.pdf" target="_blank">2018-19 Batch Placement-107 students has placed as on 15-03-2019</a> -->
     <br>
     <br>
 
